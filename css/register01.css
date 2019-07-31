@@ -1,0 +1,130 @@
+*{margin:0;padding:0;list-style: none;}
+#registerbox{
+    width: 100%;
+}
+#registerbox .registernav{
+    width: 100%;
+    background: white;
+    height: 64px;
+    z-index: 100;
+    /* position: relative; */
+}
+#registerbox .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#registerbox .registernav a{
+    display: block;
+    height: 64px; 
+    line-height: 64px;
+    color: black;
+}
+#registerbox .registernav .logo{
+    width: 123px;
+    height: 23.81px;
+    margin-left: 24px;
+}
+#registerbox .registernav .registernav-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#registerbox .registernav .registernav-right a{
+    float: left;
+    margin:0 16px;
+}
+#registerbox .registerbody{
+    width: 100%;
+    height: 610px;
+    background: url(../img/bg-pc.jpg) no-repeat;
+    position: relative;
+}
+#registerbox .registerbody .cont-title{
+    position: absolute;
+    left: 200px;
+    top: 260px;
+}
+#registerbox .registerbody .cont-title p:nth-child(1){
+    font-size: 47px;
+    color: white;
+}
+#registerbox .registerbody .cont-title p:nth-child(2){
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+#registerbox .registerbody .registerbody-right{
+    width: 410px;
+    height: 460px;
+    background: #fff;
+    position: absolute;
+    right: 80px;
+    top: 106px;
+}
+#registerbox .registerbody .registerbody-right h2{
+    font-size: 30px;
+    color: #333;
+    padding: 36px 0 34px 0;
+    text-align: center;
+    width: 100%;
+}
+#registerbox .registerbody .registerbody-right .loginimg li{
+    float: left;
+    margin: 0 12px;
+}
+#registerbox .registerbody .registerbody-right .text1{
+    font-size: 20px;
+    margin-top: 20px;
+}
+#registerbox .registerbody .registerbody-right .text1 span:nth-child(1){
+    display: inline-block;
+    vertical-align: middle;
+    width: 88px;
+    height: 1px;
+    background: #dfdfdf;
+    margin: 0 20px 0 20px;
+}
+#registerbox .registerbody .registerbody-right .text1 span:nth-child(2){
+    display: inline-block;
+    vertical-align: middle;
+    width: 88px;
+    height: 1px;
+    background: #dfdfdf;
+    margin: 0 20px 0 20px;
+}
+#registerbox .registerbody .registerbody-right .btn{
+    width: 194px;
+    height: 56px;
+    border-radius: 15px;
+    background: blue;
+    color: #fff;
+    text-align: center;
+    line-height: 56px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+#registerbox .registerbody .registerbody-right .classa{
+    padding-left: 140px;
+}
+#registerbox .registerbody .registerbody-right .last-text{
+    margin-left: 24px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 24px;
+}
+#registerbox .registerfoot{
+    max-width: 1280px;
+    margin: 50px auto 0;
+    padding: 20px 0!important;
+    border-top: 1px solid #e5e5e5;
+}
+#registerbox .registerfoot p{
+    margin-top: 20px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
