@@ -1,0 +1,92 @@
+*{margin:0;padding:0;list-style: none;}
+#hrl{
+    width: 100%;
+}
+#hrl .top-nav{
+    width: 100%;
+    line-height: 36px;
+    padding:0 30px;
+    background: rgba(242, 242, 242);
+    position: relative;
+}
+#hrl .top-nav a{
+    color: #363636;
+}
+#hrl .top-nav .top-nav-right{
+    position: absolute;
+    right: 60px;
+    top: 0;
+}
+#hrl .top-nav .top-nav-left a{
+    font-size: 18px;
+}
+#hrl .top-nav .top-nav-right a{
+    font-size: 15px;
+}
+#hrl .top-nav .top-nav-right img{
+    width: 16px;
+    height: 16px;
+}
+/* 顶部选项卡的样式 */
+#hrl .top-tab{
+    width: 100%;
+}
+#hrl .top-tab .nav-tab{
+    border-bottom: 1px solid #cccccc;
+}
+#hrl .top-tab .nav-tab-list{
+    padding-left: 30px;
+}
+#hrl .top-tab .nav-tab-list li{
+    float: left;
+    margin-right: 16px;
+}
+#hrl .top-tab .nav-tab-list li a{
+    height: 64px;
+    /* width: 60px; */
+    line-height: 64px;
+    font-size: 15px;
+    color: #363636;
+}
+#hrl .top-tab .nav-tab-list .active{
+    border-bottom: 1px solid blue;
+}
+#hrl .top-tab .tab-cont{
+    max-width: 1220px;
+    background: yellow;
+    padding-top: 20px;
+    display: none;
+}
+#hrl .top-tab .tab-active{
+    display: block;
+}
+#hrl .top-tab .tab-cont ul{
+    float: left;
+}
+#hrl .top-tab .tab-cont .tab-img{
+    border-right: 1px solid #cccccc;
+}
+#hrl .top-tab .tab-cont .tab-img li{
+    float: left;
+    max-width: 100px;
+    font-size: 13px;
+    margin: 0 30px;
+    text-align: center;
+}
+#hrl .top-tab .tab-cont .tab-img li a{
+    color: #363636;
+}
+#hrl .top-tab .tab-cont .tab-img li img{
+    width: 100px;
+    height: 100px;
+}
+#hrl .top-tab .tab-cont .tab-txt{
+    margin-left: 30px;
+}
+#hrl .top-tab .tab-cont .tab-txt li{
+    line-height: 30px;
+}
+#hrl .top-tab .tab-cont .tab-txt li a{
+    font-size: 15px;
+    color: #363636;
+}
