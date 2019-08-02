@@ -14,7 +14,7 @@
 }
 #hrl .top-nav .top-nav-right{
     position: absolute;
-    right: 60px;
+    right: 40px;
     top: 0;
 }
 #hrl .top-nav .top-nav-left a{
@@ -30,6 +30,7 @@
 /* 顶部选项卡的样式 */
 #hrl .top-tab{
     width: 100%;
+    position: relative;
 }
 #hrl .top-tab .nav-tab{
     border-bottom: 1px solid #cccccc;
@@ -52,41 +53,103 @@
     border-bottom: 1px solid blue;
 }
 #hrl .top-tab .tab-cont{
-    max-width: 1220px;
-    background: yellow;
+    background: #fff;
+    width: 100%;
+    position: absolute;
     padding-top: 20px;
+    z-index: 100;
+}
+#hrl .top-tab .tab-cont .goodsDiv{
     display: none;
 }
-#hrl .top-tab .tab-active{
+#hrl .top-tab .tab-cont .tab-active{
     display: block;
 }
-#hrl .top-tab .tab-cont ul{
+#hrl .top-tab .tab-cont .goodsDiv ul{
     float: left;
 }
-#hrl .top-tab .tab-cont .tab-img{
+#hrl .top-tab .tab-cont .goodsDiv .tab-img{
     border-right: 1px solid #cccccc;
 }
-#hrl .top-tab .tab-cont .tab-img li{
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li{
     float: left;
     max-width: 100px;
     font-size: 13px;
     margin: 0 30px;
     text-align: center;
 }
-#hrl .top-tab .tab-cont .tab-img li a{
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li a{
     color: #363636;
 }
-#hrl .top-tab .tab-cont .tab-img li img{
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li img{
     width: 100px;
     height: 100px;
 }
-#hrl .top-tab .tab-cont .tab-txt{
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt{
     margin-left: 30px;
 }
-#hrl .top-tab .tab-cont .tab-txt li{
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li{
     line-height: 30px;
 }
-#hrl .top-tab .tab-cont .tab-txt li a{
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li a{
     font-size: 15px;
     color: #363636;
+}
+/* 顶部logo、右边的样式 */
+#hrl .top-tab .top-logo{
+    position: absolute;
+    left: 600px;
+    top: 20px;
+}
+#hrl .top-tab .top-logo img{
+    width: 130px;
+    height: 22px;
+}
+#hrl .top-tab .top-tab-right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+#hrl .top-tab .top-tab-right a{
+    font-size: 15px;
+    color: #363636;
+    margin-right: 26px;
+}
+#hrl .top-tab .top-tab-right a img{
+    width: 20px;
+    height: 20px;
+}
+/* 轮播图的样式 */
+#hrl .banner{
+    max-width: 100%;
+    height: 427px;
+    overflow: hidden;
+    z-index: 1;
+}
+#hrl .banner .bannerimgs{
+    height: 427px;
+    width: 800%;
+    overflow: hidden;
+}
+#hrl .banner .bannerimgs li{
+    float: left;
+    width: 12.5%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 427px;
+}
+#hrl .advertisement{
+    padding-left: 30px;
+    padding-top: 40px;
+    width: 100%;
+    /* background: #363636; */
+    margin:0 auto;
+}
+#hrl .advertisement div{
+    float: left;
+    margin-right: 26px;
+}
+#hrl .advertisement img{
+    width: 385px;
+    height: 270px;
 }
