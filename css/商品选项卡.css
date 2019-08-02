@@ -1,0 +1,79 @@
+*{margin: 0;padding:0;list-style: none}
+#tabA{
+    width: 1148px;
+    height: 472px;
+    margin: 0 auto;
+    /* background: yellow; */
+}
+#tabA .tabA-nav{
+    position: relative;
+    margin:60px auto;
+    height: 375px;
+    max-width: 1220px;
+    /* background: red; */
+}
+#tabA .tabA-nav .tabA-title{
+    font-size: 26px;
+    color: #333333;
+    position: absolute;
+    top: -60px;
+}
+#tabA .tabA-nav .goodsmost{
+    font-size: 20px;
+    color: #333333;
+    position: absolute;
+    top: -50px;
+    right: 40px;
+}
+#tabA .tabA-nav .tabA-btns{
+    position: absolute;
+    top: -50px;
+    left: 150px;
+    text-align: center;
+    height: 13%;
+}
+#tabA .tabA-nav .tabA-btns li{
+    /* float: left; */
+    display: inline-block;
+    height: 20px;
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    line-height: 20px;
+    margin:0 15px;
+    cursor: pointer;
+}
+#tabA .tabA-nav .tabA-cont{
+    margin-left: 20px;
+}
+#tabA .tabA-nav .tabA-cont li{
+    display: inline-block;
+    width: 23%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+    border-right: 10px solid rgba(245, 245, 245);
+}
+#tabA .tabA-nav .tabA-cont li img{
+    width: 217px;
+    height: 217px;
+}
+#tabA .tabA-nav .tabA-cont .goodsname{
+    /* display: block; */
+    font-size: 16px;
+    font-family: "微软雅黑";
+    line-height: 22px;
+    height: 50px;
+    width: 100%;
+}
+#tabA .tabA-nav .tabA-cont .newprice{
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+}
+#tabA .tabA-nav .tabA-cont .oldprice{
+    font-size: 16px;
+    color: #cccccc;
+    text-align: center;
+    text-decoration: line-through;
+}

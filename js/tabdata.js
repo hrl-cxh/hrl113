@@ -101,53 +101,77 @@ let navtabdata = [
 }]
 
 //商品tabA的数据
-let tabAdata =[
+let tabData =[
 {
     "title":"配件",
     "type":[{
         "typelike":"保护类",
         "cont":[{
             "contimg":"//res.samsungeshop.com.cn/resources/2019/3/7/15519516124734642_293X293.jpg",
-            "contname":"Galaxy S10+ 镜面保护套"
+            "contname":"Galaxy S10+ 镜面保护套",
+            "newprice":"299.00",
+            "oldprice":"428.00"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2019/3/6/15518820342713454_293X293.jpg",
-            "contname":"Galaxy S10+ 硅胶保护壳"
+            "contname":"Galaxy S10+ 硅胶保护壳",
+            "newprice":"199.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2019/3/7/15519512483869399_293X293.jpg",
-            "contname":"Galaxy S10 镜面保护套"
+            "contname":"Galaxy S10 镜面保护套",
+            "newprice":"299.00",
+            "oldprice":"428.00"
         },{
-            "contimg":"//res.samsungeshop.com.cn/resources/2019/4/8/15546926546034125_293X293.jpg",
-            "contimg":"Galaxy S10 复仇者联盟智能保护壳"
+            "contimg":"http://res.samsungeshop.com.cn/resources/2019/4/8/15546926546034125_293X293.jpg",
+            "contname":"Galaxy S10 复仇者联盟智能保护壳",
+            "newprice":"299.00",
+            "oldprice":"null"
         }]
     },{
         "typelike":"音频类",
         "cont":[{
             "contimg":"//res.samsungeshop.com.cn/resources/2019/3/14/15525742797923937_293X293.jpg",
-            "contname":"AKG Y100BT 颈挂式无线蓝牙耳机"
+            "contname":"AKG Y100BT 颈挂式无线蓝牙耳机",
+            "newprice":"699.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2019/3/14/15525741041235304_293X293.jpg",
-            "contname":"AKG Y500BT 贴耳式无线蓝牙耳机"
+            "contname":"AKG Y500BT 贴耳式无线蓝牙耳机",
+            "newprice":"1299.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2017/6/13/14973423410549132_293X293.jpg",
-            "contname":"弹力项圈运动耳机"
+            "contname":"弹力项圈运动耳机",
+            "newprice":"478.00",
+            "oldprice":"null"
         },{
-            "contimg":"//res.samsungeshop.com.cn/resources/2016/10/18/14767790194327396_293X293.jpg",
-            "contimg":"入耳式耳机"
+            "contimg":"https://res.samsungeshop.com.cn/resources/2016/10/18/14767790194327396_293X293.jpg",
+            "contname":"入耳式耳机",
+            "newprice":"79.00",
+            "oldprice":"null"
         }]
     },{
         "typelike":"电源类",
         "cont":[{
             "contimg":"//res.samsungeshop.com.cn/resources/2018/9/14/15369125090493796_293X293.jpg",
-            "contname":"双项无线充电底座"
+            "contname":"双项无线充电底座",
+            "newprice":"608.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2018/9/17/15371662451577595_293X293.jpg",
-            "contname":"无线充电底座"
+            "contname":"无线充电底座",
+            "newprice":"458.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2017/4/25/14931092631565933_293X293.jpg",
-            "contname":"三星 旅行充电器 Type C"
+            "contname":"三星 旅行充电器 Type C",
+            "newprice":"108.00",
+            "oldprice":"null"
         },{
             "contimg":"//res.samsungeshop.com.cn/resources/2018/11/28/15433955099442350_293X293.jpg",
-            "contname":"双向加速充电移动电源 10000毫安"
+            "contname":"双向加速充电移动电源 10000毫安",
+            "newprice":"149.00",
+            "oldprice":"null"
         }]
     }]
 },{
@@ -157,80 +181,114 @@ let tabAdata =[
         "cont":[{
             "Label":"立减",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/2/17/15504164072644304_293X293.jpg",
-            "contname":"Galaxy S10 512GB版本"
+            "contname":"Galaxy S10 512GB版本",
+            "newprice":"7699.00",
+            "oldprice":"null"
         },{
             "label":"立减",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/9/11/15366540724936366_293X293.jpg",
-            "contname":"Galaxy Note9"
+            "contname":"Galaxy Note9",
+            "newprice":"4999.00",
+            "oldprice":"6999.00"
         },{
             "label":"立减",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/10/18/15398552452035605_293X293.jpg",
-            "contname":"Galaxy A6s"
+            "contname":"Galaxy A6s",
+            "newprice":"999.00",
+            "oldprice":"1799.00"
         },{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/7/11/15628312139038808_293X293.jpg",
-            "contname":"Galaxy A40s"
+            "contname":"Galaxy A40s",
+            "newprice":"1499.00",
+            "oldprice":"null"
         }]
     },{
         "typelike":"可穿戴设备",
         "cont":[{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/4/2/15541984397739072_293X293.jpg",
-            "contname":"Samsung Galaxy Buds"
+            "contname":"Samsung Galaxy Buds",
+            "newprice":"999.00",
+            "oldprice":"null"
         },{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/6/24/15613819425783094_293X293.jpg",
-            "contname":"Galaxy Watch Active"
+            "contname":"Galaxy Watch Active",
+            "newprice":"1399.00",
+            "oldprice":"1599.00"
         },{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/11/6/1541493180630352_293X293.jpg",
-            "contname":"Samsung Galaxy Watch LTE版 46mm钛泽银"
+            "contname":"Samsung Galaxy Watch LTE版 46mm钛泽银",
+            "newprice":"2299.00",
+            "oldprice":"2499.00"
         },{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/8/27/15353646476566650_293X293.jpg",
-            "contname":"Samsung Galaxy Watch 蓝牙版42mm"
+            "contname":"Samsung Galaxy Watch 蓝牙版42mm",
+            "newprice":"1899.00",
+            "oldprice":"2099.00"
         }]
     },{
         "typelike":"平板电脑",
         "cont":[{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/6/4/15596519191798793_293X293.jpg",
-            "contname":"Galaxy Tab S5e 4G"
+            "contname":"Galaxy Tab S5e 4G",
+            "newprice":"3599.00",
+            "oldprice":"null"
         },{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/5/30/15592263578179518_293X293.jpg",
-            "contname":"Galaxy Tab A(2019 10.1英寸)"
+            "contname":"Galaxy Tab A(2019 10.1英寸)",
+            "newprice":"1699.00",
+            "oldprice":"null"
         },{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/8/29/15355228234576478_293X293.jpg",
-            "contname":"Galaxy Tab S4 4G"
+            "contname":"Galaxy Tab S4 4G",
+            "newprice":"5388.00",
+            "oldprice":"5888.00"
         },{
             "label":"立减",
             "contimg":"//res.samsungeshop.com.cn/resources/2018/8/27/15353740973471156_293X293.jpg",
-            "contname":"Galaxy Tab E"
+            "contname":"Galaxy Tab E",
+            "newprice":"699.00",
+            "oldprice":"1199.00"
         }]
     },{
         "typelike":"笔记本电脑",
         "cont":[{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/6/18/15608425316964536_293X293.jpg",
-            "contname":"三星星曜 750XBE-X02"
+            "contname":"三星星曜 750XBE-X02",
+            "newprice":"8499.00",
+            "oldprice":"null"
         },{
             "label":"新品",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/6/18/15608612396211979_293X293.jpg",
-            "contname":"三星星曜 750XBE-X03"
+            "contname":"三星星曜 750XBE-X03",
+            "newprice":"9999.00",
+            "oldprice":"null"
         },{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/4/3/15542943462071119_293X293.jpg",
-            "contname":"三星星曜Pen 930MBE-K01"
+            "contname":"三星星曜Pen 930MBE-K01",
+            "newprice":"7999.00",
+            "oldprice":"null"
         },{
             "label":"热销",
             "contimg":"//res.samsungeshop.com.cn/resources/2019/2/10/15497751284773365_293X293.jpg",
-            "contname":"三星星曜Pen Pro930SBE-K01"
+            "contname":"三星星曜Pen Pro930SBE-K01",
+            "newprice":"9999.00",
+            "oldprice":"null"
         }]
     }]
 }]
  
+//商品tabB的数据
+
 
  
 
