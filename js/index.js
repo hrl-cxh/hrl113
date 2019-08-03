@@ -68,9 +68,24 @@ $(function(){
     
     $('.banner').crxCarousel({
         type: "horizontal",
-        imgUrl: ["./img/banner01.png","./img/banner02.png","./img/banner03.png",
-                "./img/banner04.png","./img/banner05.png","./img/banner06.png"],
+        imgUrl: ["https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201907/190719_KV_A80_1220_427.jpg",
+        "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201907/190730_kv_S10_1220_427.jpg",
+        "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201906/190701_KV_Activities-5G_1220_427.jpg",
+        "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201906/190627_KV_A60_1220_427.jpg",
+        "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201905/190507_KV_SmartHone_1220_427.jpg",
+        "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201905/190507_KV_GalaxyFold_1220_427.jpg"],
         aUrl: ["#","#","#","#","#"],
+        zykey: false,
+        page: false,
+        position: "center"
+    })
+
+    $('.activity-region').crxCarousel({
+        type: "horizontal",
+        imgUrl:["https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201905/190506_W2019_1220_184.jpg",
+                "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201905/190430_GalaxyBuds_1220_184.jpg",
+                "https://res.samsungshop.com.cn/resources/ckimg/images/KVbanner/2019/201906/20190618_MKV_TabS5e_1220_184.jpg"],
+        aUrl: ["#","#","#"],
         zykey: false,
         page: false,
         position: "center"

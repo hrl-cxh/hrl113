@@ -98,12 +98,12 @@
 /* 顶部logo、右边的样式 */
 #hrl .top-tab .top-logo{
     position: absolute;
-    left: 600px;
+    left: 50%;
     top: 20px;
 }
 #hrl .top-tab .top-logo img{
-    width: 130px;
-    height: 22px;
+    width: 110px;
+    height: 20px;
 }
 #hrl .top-tab .top-tab-right{
     position: absolute;
@@ -111,9 +111,9 @@
     top: 20px;
 }
 #hrl .top-tab .top-tab-right a{
-    font-size: 15px;
+    font-size: 14px;
     color: #363636;
-    margin-right: 26px;
+    margin-right: 16px;
 }
 #hrl .top-tab .top-tab-right a img{
     width: 20px;
@@ -141,15 +141,47 @@
 #hrl .advertisement{
     padding-left: 30px;
     padding-top: 40px;
+    padding-bottom: 40px;
     width: 100%;
     /* background: #363636; */
     margin:0 auto;
 }
 #hrl .advertisement div{
     float: left;
-    margin-right: 26px;
+    width: 28%;
+    margin: 0 20px;
 }
 #hrl .advertisement img{
-    width: 385px;
-    height: 270px;
+    width: 310px;
+    height: 200px;
+}
+#hrl .activity-region{
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+#hrl .activity-region p{
+    font-size: 26px;
+    color: #363636;
+    margin-bottom: 32px;
+}
+#hrl .activity-region .activityimg{
+    width: 3660px;
+    /* height: 184px; */
+}
+#hrl .activity-region .activityimg li{
+    float: left;
+    width: 1220px;
+}
+#hrl .activity-region .activityimg li img{
+    width: 1220px;
+    height: 200px;
+}
+#hrl .hot-goods{
+    width: 100%;
+}
+#hrl .hot-goods p{
+    font-size: 26px;
+    color: #363636;
+    margin-bottom: 32px;
 }
