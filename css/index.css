@@ -179,9 +179,38 @@
 }
 #hrl .hot-goods{
     width: 100%;
+    padding-top: 20px;
 }
-#hrl .hot-goods p{
+#hrl .hot-goods .hot-text{
     font-size: 26px;
     color: #363636;
     margin-bottom: 32px;
+}
+#hrl .hot-goods .hot-goods-list>div{
+    float: left;
+    font-size: 16px;
+    border-right: 5px solid #ccc;
+    text-align: center;
+}
+#hrl .hot-goods .hot-goods-list .hotbox{
+    position: relative;
+    padding: 0 30px;
+}
+#hrl .hot-goods .hot-goods-list .hotbox div img{
+    width: 205px;
+    height: 205px;
+}
+#hrl .hot-goods .hot-goods-list .hotbox div h3 p{
+    text-decoration: line-through;
+    color: #ccc;
+    font-size: 14px;
+}
+#hrl .hot-goods .hot-goods-list .hotbox .classhot{
+    display: block;
+    width: 30px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

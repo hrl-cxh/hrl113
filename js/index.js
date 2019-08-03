@@ -90,4 +90,19 @@ $(function(){
         page: false,
         position: "center"
     })
+
+    class hotgoodslist{
+        constructor(hotgoodsdata){
+            this.hotgoodsdata = hotgoodsdata;
+            this.links();
+        }
+        links(){
+            this.createhtml();
+        }
+        //进行标签的处理
+        createhtml(){
+            
+        }
+    }
+    new hotgoodslist(hotgoodsdata);
 })

@@ -288,7 +288,35 @@ let tabData =[
 }]
  
 //商品tabB的数据
-
+let hotgoodsdata = [{
+    "title":"热销",
+    "imgurl":"//res.samsungeshop.com.cn/resources/2019/2/18/15504714179943326_293X293.jpg",
+    "imgname":"Galaxy S10+",
+    "discount":"好礼三选一 享12期免息",
+    "newprice":"6999.00",
+    "oldprice":"null"
+},{
+    "title":"新品",
+    "imgurl":"//res.samsungeshop.com.cn/resources/2019/7/11/15628306744615279_293X293.jpg",
+    "imgname":"Galaxy A60",
+    "discount":" 桃桃汽汽 新色上市",
+    "newprice":"1499.00",
+    "oldprice":"null"
+},{
+    "title":"立减",
+    "imgurl":"//res.samsungeshop.com.cn/resources/2018/3/14/15210101574116158_293X293.jpg",
+    "imgname":"Galaxy S9+ 128GB版本",
+    "discount":"优惠1500元 享6期免息",
+    "newprice":"4999.00",
+    "oldprice":"6499.00"
+},{
+    "title":"新品",
+    "imgurl":"//res.samsungeshop.com.cn/resources/2019/7/5/15623069730323459_293X293.jpg",
+    "imgname":"Galaxy A80",
+    "discount":"新品上市 享多重好礼",
+    "newprice":"3799.00",
+    "oldprice":"null"
+}]
 
  
 
