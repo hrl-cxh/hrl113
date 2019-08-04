@@ -101,7 +101,35 @@ $(function(){
         }
         //进行标签的处理
         createhtml(){
-            
+            // console.log(this.hotgoodsdata)
+            let arrhot = this.hotgoodsdata.map((item) =>{
+                if(item.oldprice.length == 4){
+                    return`<div class="hotbox">
+                <div>
+                    <a href="#"><img src="${item.imgurl}" alt=""></a>
+                    <h3>${item.imgname}<br>
+                        <p>${item.discount}</p>
+                    </h3>
+                    <span>￥${item.newprice}</span><span></span>
+                </div>
+                <span class="classhot">${item.title}</span>
+            </div>`
+                }else{
+                    return`<div class="hotbox">
+                <div>
+                    <a href="#"><img src="${item.imgurl}" alt=""></a>
+                    <h3>${item.imgname}<br>
+                        <p>${item.discount}</p>
+                    </h3>
+                    <span>￥${item.newprice}</span>&nbsp<span class="oldprice">￥${item.oldprice}</span>
+                </div>
+                <span class="classhot">${item.title}</span>
+            </div>`
+                }
+                
+            }).join('');
+            console.log(arrhot);
+            $('.hot-goods-list').html(arrhot);
         }
     }
     new hotgoodslist(hotgoodsdata);

@@ -1,0 +1,116 @@
+*{margin: 0;padding:0;list-style: none}
+#htl .tabB{
+    margin-top: 40px;
+    width: 1148px;
+    height: 472px;
+    margin: 0 auto;
+    /* background: yellow; */
+}
+#hrl .tabB .tabB-nav{
+    position: relative;
+    margin-top:60px;
+    /* margin-bottom: 30px; */
+    height: 375px;
+    max-width: 1220px;
+    /* background: red; */
+}
+#hrl .tabB .tabB-nav .tabB-title{
+    font-size: 26px;
+    color: #333333;
+    position: absolute;
+    top: -60px;
+}
+#hrl .tabB .tabB-nav .goodsmost{
+    font-size: 20px;
+    color: #333333;
+    position: absolute;
+    top: -50px;
+    right: 40px;
+}
+#hrl .tabB .tabB-nav .btn-left{
+    display: block;
+    width: 30px;
+    height: 50px;
+    border:1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 100px;
+}
+#hrl .tabB .tabB-nav .btn-right{
+    display: block;
+    width: 30px;
+    height: 50px;
+    border:1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+#hrl .tabB .tabB-nav .tabB-btns{
+    position: absolute;
+    top: -50px;
+    left: 150px;
+    text-align: center;
+    height: 13%;
+}
+#hrl .tabB .tabB-nav .tabB-btns li{
+    /* float: left; */
+    display: inline-block;
+    height: 20px;
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    line-height: 20px;
+    margin:0 15px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+#hrl .tabB .tabB-nav .tabB-btns .tabB-btns-active{
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+#hrl .tabB .tabB-nav .tabB-cont{
+    margin-left: 20px;
+    /* padding: 0 60px; */
+    display: none;
+}
+#hrl .tabB .tabB-nav .tabB-con{
+    display: block;
+}
+#hrl .tabB .tabB-nav .tabB-cont li{
+    display: inline-block;
+    width: 23%;
+    height: 100%;
+    /* margin: 0 10px; */
+    text-align: center;
+    line-height: 100%;
+    border-right: 10px solid rgba(245, 245, 245);
+}
+#hrl .tabB .tabB-nav .tabB-cont li:nth-child(4){
+    border-right: none;
+}
+#hrl .tabB .tabB-nav .tabB-cont li img{
+    width: 217px;
+    height: 217px;
+}
+#hrl .tabB .tabB-nav .tabB-cont .goodsname{
+    /* display: block; */
+    font-size: 16px;
+    font-family: "微软雅黑";
+    line-height: 22px;
+    height: 50px;
+    width: 100%;
+}
+#hrl .tabB .tabB-nav .tabB-cont .newprice{
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+}
+#hrl .tabB .tabB-nav .tabB-cont .oldprice{
+    font-size: 16px;
+    color: #cccccc;
+    text-align: center;
+    text-decoration: line-through;
+}

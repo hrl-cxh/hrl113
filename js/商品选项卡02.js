@@ -4,7 +4,7 @@ $(function () {
             this.arr = arr;
             this.links();
             this.leftnum = 0;
-            this.rightnum = 3;
+            this.rightnum = 5;
         }
         //处理标签
         links(){
@@ -13,29 +13,29 @@ $(function () {
             this.addbtn();
             this.addcreattime();
             // this.addmouseenter();
-            $('.tabA-cont').eq(0).addClass('tabA-con').siblings().removeClass('tabA-con');
-            $('.tabA-btns>li').eq(0).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
+            $('.tabB-cont').eq(0).addClass('tabB-con').siblings().removeClass('tabB-con');
+            $('.tabB-btns>li').eq(0).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
         }
         //创建标签
         addcreattabhtml(){
             let oDiv = document.createElement('div');
-            oDiv.className = 'tabA-nav';
-            let dataA = this.arr;
+            oDiv.className = 'tabB-nav';
+            let dataB = this.arr;
             let navtxt = '';
             let lis ="";
             // let arrlis = [];
             let oUlA = document.createElement('ul');
-            oUlA.className = 'tabA-btns';
+            oUlA.className = 'tabB-btns';
 
-            let ptext = ` <p class="tabA-title">${dataA.title}</p>
+            let ptext = ` <p class="tabB-title">${dataB.title}</p>
                         <a class="goodsmost" href="#">更多&gt</a>
                         <span class="btn-left">&lt</span>
                         <span class="btn-right">&gt</span>
                         `
             $(oDiv).html(ptext);
-            $('.tabA').append(oDiv);
+            $('.tabB').append(oDiv);
             //遍历数据
-            dataA.type.forEach(element =>{
+            dataB.type.forEach(element =>{
                 
                 lis += `<li>${element.typelike}</li>`;
                 // console.log(lis);
@@ -43,7 +43,7 @@ $(function () {
                 $(oUlA).html(lis);
                 // console.log(oUlA)
                 $(oDiv).append(oUlA);
-                $('.tabA').append(oDiv);                
+                $('.tabB').append(oDiv);                
                 //再次遍历数据
                 navtxt = element.cont.map(item =>{
                     // console.log(item.oldprice)
@@ -57,13 +57,13 @@ $(function () {
                         return `<li>
                         <a href="#"><img src="${item.contimg}"></a>
                         <p class="goodsname">${item.contname}</p><br>
-                        <span class="newprice">￥${item.newprice}</span><span class="oldprice">￥${item.oldprice}</span>
+                        <span class="newprice">￥${item.newprice}</span>&nbsp &nbsp<span class="oldprice">￥${item.oldprice}</span>
                         </li>`
                     }
                     
                 }).join('');
                 let oUlB = document.createElement('ul');
-                oUlB.className = 'tabA-cont';
+                oUlB.className = 'tabB-cont';
                 $(oUlB).html(navtxt);
                 $(oDiv).append(oUlA,oUlB);
             })
@@ -71,28 +71,28 @@ $(function () {
         //创建函数方法
         // 鼠标点击事件
         addmouseclick(){
-            $('.tabA-btns').on("click","li",function(){
+            $('.tabB-btns').on("click","li",function(){
                 let num = $(this).index();
-                $(this).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                $('.tabA-cont').eq(num).addClass('tabA-con').siblings().removeClass('tabA-con');
+                $(this).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                $('.tabB-cont').eq(num).addClass('tabB-con').siblings().removeClass('tabB-con');
             })
         }
         //右键点击事件
         addbtn(){
-            let Num = $('.tabA-btns>li').length;
+            let Num = $('.tabB-btns>li').length;
             console.log(Num)
             // this.btnnum = 0;
             //右键
             $('.btn-right').click(() =>{
                 this.rightnum++
                 console.log(this.rightnum);
-                if(this.rightnum > 2){
+                if(this.rightnum > 3){
                     this.rightnum = 0
-                    $('.tabA-btns>li').eq(this.rightnum).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                    $('.tabA-cont').eq(this.rightnum).addClass('tabA-con').siblings().removeClass('tabA-con');                    
+                    $('.tabB-btns>li').eq(this.rightnum).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                    $('.tabB-cont').eq(this.rightnum).addClass('tabB-con').siblings().removeClass('tabB-con');                    
                 }else{
-                    $('.tabA-btns>li').eq(this.rightnum).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');                    
-                    $('.tabA-cont').eq(this.rightnum).addClass('tabA-con').siblings().removeClass('tabA-con');
+                    $('.tabB-btns>li').eq(this.rightnum).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');                    
+                    $('.tabB-cont').eq(this.rightnum).addClass('tabB-con').siblings().removeClass('tabB-con');
                 }
             })
             //左键
@@ -101,12 +101,12 @@ $(function () {
                 this.leftnum--
                     console.log(this.leftnum);
                     if(this.leftnum < 0){
-                        this.leftnum = 2;
-                        $('.tabA-btns>li').eq(this.leftnum).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                        $('.tabA-cont').eq(this.leftnum).addClass('tabA-con').siblings().removeClass('tabA-con');                    
+                        this.leftnum = 3;
+                        $('.tabB-btns>li').eq(this.leftnum).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                        $('.tabB-cont').eq(this.leftnum).addClass('tabB-con').siblings().removeClass('tabB-con');                    
                     }else{
-                        $('.tabA-btns>li').eq(this.leftnum).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                        $('.tabA-cont').eq(this.leftnum).addClass('tabA-con').siblings().removeClass('tabA-con');
+                        $('.tabB-btns>li').eq(this.leftnum).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                        $('.tabB-cont').eq(this.leftnum).addClass('tabB-con').siblings().removeClass('tabB-con');
                     }
                 })
         }
@@ -116,22 +116,22 @@ $(function () {
             let num = 0;
             let timer = setInterval(function(){
                 ++num
-                if(num > 2){
+                if(num > 3){
                     num = 0;
-                    $('.tabA-btns>li').eq(num).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                    $('.tabA-cont').eq(num).addClass('tabA-con').siblings().removeClass('tabA-con');
+                    $('.tabB-btns>li').eq(num).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                    $('.tabB-cont').eq(num).addClass('tabB-con').siblings().removeClass('tabB-con');
                 }else{
-                    $('.tabA-btns>li').eq(num).addClass('tabA-btns-active').siblings().removeClass('tabA-btns-active');
-                    $('.tabA-cont').eq(num).addClass('tabA-con').siblings().removeClass('tabA-con');
+                    $('.tabB-btns>li').eq(num).addClass('tabB-btns-active').siblings().removeClass('tabB-btns-active');
+                    $('.tabB-cont').eq(num).addClass('tabB-con').siblings().removeClass('tabB-con');
                 }                    
             },2000)
-            $('.tabA').hover(() =>{
+            $('.tabB').hover(() =>{
                 clearInterval(timer);
             },()=>{
                 this.addcreattime();
             })
         }
     }
-    let arr = tabData[0];
+    let arr = tabData[1];
     let p = new creatgoodstab(arr);
 })
