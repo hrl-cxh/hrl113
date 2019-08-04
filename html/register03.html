@@ -8,10 +8,19 @@
     <script src="../js/jquery-3.4.1.js"></script>
     <script>
         $(function(){
-            let arr = [];
+            var arrT = [];
             $(".list-rowr").each(function(index,item){
+                var arrA = [];
                 var a ={};
-                o.imgurl = $(item).find()
+                a.src = $(item).find(".list-boximg").find('a>img')[0].src;
+                var obj1 = $(item).find(".list-boximg").find('.icon-active-box').find('label>span');
+                obj1.map(function(index,item){
+                    arrA.push($(item).html());
+                })
+                a.title = arrA;
+                a.name = $(item).find(".list-scroll-all").find('.product-name').find('h2>a').html();
+                a.newprice = $(item).find(".list-scroll-all").find('.product-name').find('p').html();
+                arrT.push(a);
             })
         })
     </script>
