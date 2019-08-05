@@ -110,7 +110,7 @@ $(function(){
     }
     //发送请求
     $.get({
-        url:"../server/data01.php",
+        url:"../server/goodslist03.json",
         dataType:"json",
         success(res){
             console.log(eval(res))

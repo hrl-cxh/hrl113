@@ -1,0 +1,82 @@
+*{margin:0;padding:0;list-style: none;}
+body{
+    background:rgb(230, 230, 230);
+}
+#hrl{
+    width: 600px;
+    height: 800px;
+    margin:30px auto;
+    background: white;
+}
+#hrl .hrl-login .personLogin{
+    position: relative;
+}
+#hrl .hrl-login .personLogin h2{
+    margin-bottom: 10px;
+    color: #1428a0;
+    font-weight: bold;
+    font-size: 40px;
+}
+#hrl .hrl-login .personLogin .btnclear{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999em;
+    background: url(../img/xxx.png) no-repeat;
+    background-size: 24px;
+}
+#hrl .hrl-login .personLogin fieldset{
+    width: 100%;
+    margin-top: 50px;
+}
+#hrl .hrl-login .personLogin fieldset div{
+    width: 500px;
+    margin:0 auto;
+}
+#hrl .hrl-login .personLogin fieldset input{
+    display: block;
+    width: 100%;
+    color: #000;
+    border: none;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #DDD;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+#hrl .hrl-login .personLogin fieldset .box1{
+    position: relative;
+}
+#hrl .hrl-login .personLogin fieldset .box1 label{
+    position: absolute;
+    top: -18px;
+    left: auto;
+    max-width: 100%;
+    height: 2.7em;
+    line-height: 2.7em;
+    color: #767676;
+    font-size: 1.142em;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#hrl .hrl-login .personLogin fieldset .box2{
+    position: relative;
+}
+#hrl .hrl-login .personLogin fieldset .box2>label{
+    position: absolute;
+    top: -18px;
+    left: auto;
+    max-width: 100%;
+    height: 2.7em;
+    line-height: 2.7em;
+    color: #767676;
+    font-size: 1.142em;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

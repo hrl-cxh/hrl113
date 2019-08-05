@@ -1,7 +1,7 @@
 <?php
     $con = mysqli_connect("127.0.0.1","root","","goodslist");
     mysqli_query($con,"SET NAMES utf8");
-    $data = file_get_contents("goodslist01.json");
+    $data = file_get_contents("goodslist02.json");
     $arr = json_decode($data,true);
     // var_dump($arr);
 
