@@ -19,7 +19,8 @@
                 })
                 a.title = arrA;
                 a.name = $(item).find(".list-scroll-all").find('.product-name').find('h2>a').html();
-                a.newprice = $(item).find(".list-scroll-all").find('.product-name').find('p').html();
+                a.newprice = $(item).find(".list-scroll-all").find('.product-name').find('p').text().substr(1,9);
+                a.oldprice = $(item).find(".list-scroll-all").find('.product-name').find('p>del').text().substr(3);
                 arrT.push(a);
             })
         })

@@ -15,7 +15,7 @@ $(function(){
             let oUl = $("<ul></ul>");
             oUl.addClass("nav-tab-list clearfix");
             let lis = this.navtabdata.map((item)=>{
-                return `<li><a href="#">${item.title}</a></li>`
+                return `<li><a href="http://127.0.0.1:1996/hrl113/html/商品列表页.html#">${item.title}</a></li>`
             }).join('');
             oUl.html(lis);
             $('.nav-tab').append(oUl);
@@ -28,7 +28,7 @@ $(function(){
                element.headdata.forEach(ele =>{
                 //左边的ul
                 lisA = ele.dataimg.map((item)=>{
-                    return `<li><a href="#"><img src="${item.imgurl}">
+                    return `<li><a href=""><img src="${item.imgurl}">
                     <p>${item.imgname}</p>
                     </a></li>`
                 }).join('');

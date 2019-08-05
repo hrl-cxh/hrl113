@@ -1,1 +1,74 @@
-[{"src":"https://res.samsungeshop.com.cn/resources/2019/4/2/15541983080223748_293X293.jpg","title":["免息"],"name":"Samsung Galaxy Buds","newprice":"￥999.00"},{"src":"https://res.samsungeshop.com.cn/resources/2018/11/6/1541493180630352_293X293.jpg","title":["立减","免息"],"name":"Samsung Galaxy Watch  LTE版 46mm钛泽银","newprice":"￥2,299.00<del>  ￥2,499.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2018/8/27/15353647882218146_293X293.jpg","title":["立减","免息"],"name":"Samsung Galaxy Watch 蓝牙版46mm钛泽银","newprice":"￥1,999.00<del>  ￥2,199.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2018/8/27/15353644888573725_293X293.jpg","title":["免息","立减"],"name":"Samsung Galaxy Watch 蓝牙版42mm","newprice":"￥1,899.00<del>  ￥2,099.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2019/3/14/15525681558852907_293X293.jpg","title":["免息","立减"],"name":"Galaxy Watch Active","newprice":"￥1,399.00<del>  ￥1,599.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2017/9/21/15059624038607287_293X293.jpg","title":["免息","立减"],"name":"Samsung Gear 360 全景相机","newprice":"￥749.00<del>  ￥1,799.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2017/9/25/15063350601111697_293X293.jpg","title":[],"name":"Samsung Gear Fit2 Pro智能运动手环","newprice":"￥999.00<del>  ￥1,299.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2018/3/2/15199794382481019_293X293.jpg","title":[],"name":"Samsung Gear IconX 2018 无线耳机","newprice":"￥1,299.00<del>  ￥1,499.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2017/9/27/15064779726572194_293X293.jpg","title":[],"name":"Samsung Gear VR含控制器版","newprice":"￥999.00<del>  ￥1,099.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2017/11/1/15095077634077447_293X293.jpg","title":["直降"],"name":"Samsung Gear Sport 智能手表","newprice":"￥1,199.00<del>  ￥1,699.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2016/12/8/14811707767326668_293X293.jpg","title":["立减"],"name":"Samsung Gear S3 智能手表-先锋版","newprice":"￥1,649.00<del>  ￥1,999.00</del>  \n\t\t\t\t\t\t\t "},{"src":"https://res.samsungeshop.com.cn/resources/2016/12/8/1481170722921706_293X293.jpg","title":["立减"],"name":"Samsung Gear S3 智能手表-经典版","newprice":"￥1,649.00<del>  ￥1,999.00</del>  \n\t\t\t\t\t\t\t "}]
+$(function(){
+    class navlist{
+        constructor(navtabdata){
+            this.navtabdata = navtabdata;
+            this.links();
+        }
+        //处理标签
+        links(){
+            this.addcreatnavul();
+            this.addcreatnavbodyul();
+            this.addcreatmouse();
+        }
+        //创建顶部标签
+        addcreatnavul(){
+            let oUl = $("<ul></ul>");
+            oUl.addClass("nav-tab-list clearfix");
+            let lis = this.navtabdata.map((item)=>{
+                return `<li><a href="#">${item.title}</a></li>`
+            }).join('');
+            oUl.html(lis);
+            $('.nav-tab').append(oUl);
+        }
+        //创建顶部内容标签
+        addcreatnavbodyul(){
+            let lisA = '';
+            let lisB = '';
+            this.navtabdata.forEach(element =>{
+               element.headdata.forEach(ele =>{
+                //左边的ul
+                lisA = ele.dataimg.map((item)=>{
+                    return `<li><a href="#"><img src="${item.imgurl}">
+                    <p>${item.imgname}</p>
+                    </a></li>`
+                }).join('');
+                let oUlA = document.createElement("ul");
+                oUlA.className = 'tab-img clearfix';
+                $(oUlA).html(lisA);
+                //右边的ul
+                lisB = ele.textdata.map((item)=>{
+                    return `<li><a href="#">${item}</a></li>`
+                }).join('');
+                let oUlB = document.createElement("ul");
+                oUlB.className = 'tab-txt';
+                $(oUlB).html(lisB);
+                let oDiv = $('<div></div>');
+                oDiv.addClass('goodsDiv');             
+                oDiv.append(oUlA).append(oUlB);
+                $('.tab-cont').append(oDiv);         
+               })
+            })
+        }
+        //鼠标滑入滑出事件
+        addcreatmouse(){
+            $('.nav-tab-list').on("mouseenter","li",function(){
+                let num = $(this).index();
+                // console.log(num);
+                $(this).addClass('active').siblings().removeClass('active');
+                // console.log($('.tab-cont').eq(num));
+                $('.goodsDiv').eq(num).show().siblings().hide();
+            })
+            $('.top-tab').mouseleave(function () { 
+                $('.nav-tab-list').children('li').removeClass('active');
+                $('.goodsDiv').hide();
+            });
+        }
+    }
+    let navtab = new navlist(navtabdata);
+
+    class bodylist{
+        constructor(){
+            
+        }
+    }
+})
