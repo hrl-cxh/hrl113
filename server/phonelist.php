@@ -7,16 +7,15 @@
 
     for($i = 0;$i<count($arr);$i++){
         $src = $arr[$i]["src"];
-        // var_dump(implode(" ",$arr[$i]["title"]));
-        // for($j = 0;$j<count($arr[$i]["title"]);$j++){
-        //     $title = $arr[$i]["title"][$j];
-        //     // var_dump($arr[$i]["title"][$j]);
-        // }
+        var_dump($arr[$i]["name"]);
+        // $title = implode("",$arr[$i]["title"]);
         $title = $arr[$i]["title"];
+        var_dump($title);
         $name = $arr[$i]["name"];
+        // var_dump($name);
         $newprice = $arr[$i]["newprice"];
         $oldprice = $arr[$i]["oldprice"];
-        // $id = $i;
+        $id = $i;
         $sql = "INSERT INTO `phonelist` (`src`,`title`,`name`,`newprice`,`oldprice`) VALUES ('$src','$title','$name','$newprice','$oldprice')";
         mysqli_query($con,$sql);
     }

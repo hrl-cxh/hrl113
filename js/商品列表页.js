@@ -67,8 +67,54 @@ $(function(){
     let navtab = new navlist(navtabdata);
 
     class bodylist{
-        constructor(){
-            
+        constructor(alldata){
+            this.alldata = alldata;
+            this.links();
+        }
+        links(){
+            this.creathtml();
+        }
+        //处理页面的标签
+        creathtml(){
+            let oDiv = $('.goodslist-right-body');
+            let oSpan = '';
+            //遍历数据
+            let html = this.alldata.map((item,num) =>{
+                return `<div class="goodsShow">
+                <div class="goodsShow-top">
+                    <a href="#"><img src="${item.src}"></a>
+                    <div class="goodsShow-top-title">
+                                <span>${item.title}</span>
+                        </div>
+                </div>
+                <div class="goodsShow-body">
+                        <div class="goodsColor">
+                                <ul class="goodsColor-list">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div><br>
+                    <div class="goodscot">
+                        <h2><a href="#">${item.name}</a></h2>
+                        <p class="red">
+                            ￥${item.newprice}
+                            <del>￥${item.oldprice}</del>
+                        </p>
+                    </div>
+                </div>
+            </div>`
+            }).join('');
+            oDiv.html(html);
         }
     }
+    //发送请求
+    $.get({
+        url:"../server/data01.php",
+        dataType:"json",
+        success(res){
+            console.log(eval(res))
+            let nav = new bodylist(res);
+        }
+    })
 })

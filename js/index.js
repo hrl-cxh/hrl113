@@ -133,4 +133,6 @@ $(function(){
         }
     }
     new hotgoodslist(hotgoodsdata);
+
+    
 })
