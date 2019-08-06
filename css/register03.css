@@ -1,0 +1,115 @@
+*{margin:0;padding:0;list-style: none;}
+body{
+    background:rgba(230, 230, 230);
+}
+#hrl{
+    width: 100%;
+    height: 100%;
+}
+#hrl .hrl-register{
+    width: 680px;
+    background: white;
+    margin:50px auto;
+}
+#hrl .hrl-register .hrl-register-nav{
+    width: 100%;
+    padding-top: 40px;
+    margin-left: 40px;
+    /* background: yellow; */
+}
+#hrl .hrl-register .hrl-register-nav h2{
+    font-size: 22px;
+    color: #333333;
+    margin:0 0 7px;
+}
+#hrl .hrl-register .hrl-register-nav p{
+    font-size: 16px;
+    color: #000000;
+}
+#hrl .hrl-register .hrl-register-body fieldset{
+    width: 100%;
+    margin-top:50px;
+}
+#hrl .hrl-register .hrl-register-body fieldset div{
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    margin:20px auto;
+    position: relative;
+}
+#hrl .hrl-register .hrl-register-body fieldset div input{
+    display: block;
+    width: 100%;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+#hrl .hrl-register .hrl-register-body fieldset>div label{
+    position: absolute;
+    top: -18px;
+    left: auto;
+    max-width: 100%;
+    height: 2.7em;
+    line-height: 2.7em;
+    color: #767676;
+    font-size: 1.142em;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#hrl .hrl-register .hrl-register-body fieldset .psw-text{
+    color: blue;
+    font-size: 12px;
+    display: none;
+}
+/* #hrl .hrl-register .hrl-register-body fieldset .boxF>div{
+    float: left;
+    width: 31%;
+    margin-right: 8px;
+} */
+#hrl .hrl-register .hrl-register-body fieldset .boxF .boxF-text{
+    font-size: 12px;
+    color: blue;
+    padding-bottom: 0;
+    position: absolute;
+    top: 28px;
+    display: none;
+}
+#hrl .hrl-register .hrl-register-body fieldset .boxG canvas{
+    display: inline-block;
+    width: 176px;
+    height: 52px;
+    border:1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#hrl .hrl-register .hrl-register-body fieldset .boxG button{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 188px;
+    top: 10px;
+    border:1px solid #ccc;
+    background: url(https://account.samsung.cn/accounts/v1/resources/images/v2/ico_reload.png) no-repeat;
+    background-size: 100% 100%;
+}
+#hrl .hrl-register .hrl-register-body fieldset .boxH{
+    margin-top: 40px;
+}
+#hrl .hrl-register .hrl-register-body fieldset .boxI{
+    width: 270px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(0, 0, 240, 0.5);
+    text-align: center;
+}
+#hrl .hrl-register .hrl-register-body fieldset .boxI button{
+    font-size: 22px;
+    background: rgba(0, 0, 240, 0);
+}

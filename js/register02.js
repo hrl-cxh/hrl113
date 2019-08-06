@@ -30,4 +30,17 @@ $(function(){
             }
         }
     }
+
+
+    console.log(!$('.truebtn').hasClass(''))
+    
+        $('.truebtn').click(function(){
+            if(!$('.truebtn').hasClass('active')){
+                alert('请同意条款');
+            }else{
+                window.open("../html/register03.html");
+            }
+        })
+
+    
 })

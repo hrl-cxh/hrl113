@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册页面03</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/register03.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/register03.js"></script>
 </head>
 <body>
-    
+    <div id="hrl">
+        <div class="hrl-register">
+            <div class="hrl-register-nav">
+                <h2>创建您的三星帐户</h2>
+                <p>通过三星帐户来获得盖乐世设备的更多功能。</p>
+            </div>
+            <div class="hrl-register-body">
+                <fieldset>
+                    <div class="boxA">
+                        <label for="emil">邮件</label><input id="emil" class="emil" type="text">
+                    </div>
+                    <div class="boxB">
+                        <label for="psw">密码</label><input id="psw" class="psw" type="password">
+                        <p class="psw-text">最少八个字符，使用字母与数字</p>
+                    </div>
+                    <div class="boxC">
+                        <label for="agpsw">确认密码</label><input id="agpsw" class="agpsw" type="password">
+                    </div>
+                    <div class="boxD">
+                        <label for="surname">姓氏</label><input class="surname" id="surname" type="text">
+                    </div>
+                    <div class="boxE">
+                        <label for="name">名字</label><input class="name" id="name" type="text">
+                    </div>
+                    <div class="boxF clearfix">
+                        <label for="data"></label><input class="data" id="data" type="date">
+                        <p class="boxF-text">您的生日只用于忘记邮箱时来验证你的身份</p>
+                    </div>
+                    <div class="boxG">
+                        <canvas class="radnum" id="radnum" width="176px" height="52px"></canvas>
+                        </span> <button id="btnChange" class="btnChange"></button>
+                    </div>
+                    <div class="boxH">
+                        <label for="ancode">安全代码</label><input id="ancode" class="ancode" type="text">
+                    </div>
+                    <div class="boxI">
+                        <button class="nextbtn">注册</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
