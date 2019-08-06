@@ -4,7 +4,7 @@ body{
 }
 #hrl{
     width: 600px;
-    height: 800px;
+    height: 100%;
     margin:30px auto;
     background: white;
 }
@@ -34,14 +34,17 @@ body{
 }
 #hrl .hrl-login .personLogin fieldset div{
     width: 500px;
-    margin:0 auto;
+    height: 50px;
+    line-height: 50px;
+    /* text-align: center; */
+    margin:20px auto;
 }
 #hrl .hrl-login .personLogin fieldset input{
     display: block;
     width: 100%;
     color: #000;
     border: none;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     border-bottom: 1px solid #DDD;
     background-color: transparent;
     box-sizing: border-box;
@@ -66,7 +69,7 @@ body{
 #hrl .hrl-login .personLogin fieldset .box2{
     position: relative;
 }
-#hrl .hrl-login .personLogin fieldset .box2>label{
+#hrl .hrl-login .personLogin fieldset .box2 label{
     position: absolute;
     top: -18px;
     left: auto;
@@ -79,4 +82,74 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+#hrl .hrl-login .personLogin fieldset .box3{
+    position: relative;
+}
+#hrl .hrl-login .personLogin fieldset .box3 input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+#hrl .hrl-login .personLogin fieldset .box3 label{
+    position: absolute;
+    left: 25px;
+    top: -16px;
+}
+#hrl .hrl-login .personLogin fieldset .box4{
+    position: relative;
+}
+#hrl .hrl-login .personLogin fieldset .box4 canvas{
+    display: inline-block;
+    width: 176px;
+    height: 52px;
+    border:1px solid #ccc;
+}
+#hrl .hrl-login .personLogin fieldset .box4 button{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 188px;
+    top: 10px;
+    border:1px solid #ccc;
+    background: url(https://account.samsung.cn/accounts/v1/resources/images/v2/ico_reload.png) no-repeat;
+    background-size: 100% 100%;
+}
+#hrl .hrl-login .personLogin fieldset .box5{
+    position: relative;
+    margin-top: 40px;
+}
+#hrl .hrl-login .personLogin fieldset .box5 label{
+    position: absolute;
+    top: -18px;
+    left: auto;
+    max-width: 100%;
+    height: 2.7em;
+    line-height: 2.7em;
+    color: #767676;
+    font-size: 1.142em;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#hrl .hrl-login .personLogin fieldset .img{
+    width: 480px;
+    height: 287px;
+}
+#hrl .hrl-login .personLogin fieldset .img img{
+    width: 480px;
+    height: 287px;
+}
+#hrl .hrl-login .personLogin fieldset .loginbox{
+    text-align: center;
+}
+#hrl .hrl-login .personLogin fieldset .loginbox .btnLogin{
+    width: 270px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
 }

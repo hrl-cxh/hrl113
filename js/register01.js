@@ -10,4 +10,7 @@ $(() =>{
            $(head).removeClass('fixed');
         }
     }
+    $('.btn').click(function(){
+        window.open('../html/register02.html');
+    })
 })

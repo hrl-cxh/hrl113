@@ -493,9 +493,9 @@ class RandomCode {
             var rad = this.randomNum(-5, 5) * Math.PI / 180; //获取随机的弧度
             var txt = arrCode[index]; //获取一个随机值
             this.res.push(txt.toLowerCase());
-            var x = 10 + i * 18; //随机码在canvas上的x坐标
+            var x = 10 + i * 20; //随机码在canvas上的x坐标
             var y = 20 + Math.random() * 10; //随机码在canvas上的y坐标
-            this.ctx.font = "25px Arial"; //设置随机码的字体大小和类型
+            this.ctx.font = "30px Arial"; //设置随机码的字体大小和类型
             this.ctx.fillStyle = this.randomColor(); //给随机码一个随机颜色
             this.ctx.rotate(rad); //将随机码旋转
             this.ctx.fillText(txt, x, y); //在x，y坐标出画出一个文本，内容为txt

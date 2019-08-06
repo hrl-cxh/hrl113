@@ -108,13 +108,48 @@ $(function(){
             oDiv.html(html);
         }
     }
+
     //发送请求
-    $.get({
-        url:"../server/goodslist03.json",
-        dataType:"json",
-        success(res){
-            console.log(eval(res))
-            let nav = new bodylist(res);
+    var strarr = decodeURIComponent(window.location.search.slice(1)) ;
+    // console.log(strarr);
+    var newarr = strarr.split('&');//数组
+    var str = {};
+        for(var i = 0;i < newarr.length;i++){
+            var arr1 = newarr[i].split('=');
+            // console.log(arr1);
+            str[arr1[0]] = arr1[1];
         }
-    })
+    var lisarr = str.newlis.split(',');
+    let newhtml = '';
+    for(let i = 0;i < lisarr.length;i++){
+        console.log(lisarr[i]);
+        newhtml += `<li><a href="#">${lisarr[i]}</a></li>`;
+        $('.type-body-list2').eq(0).find('ul').html(newhtml);
+    }
+    //进行必要的封装
+    function responseT(url){
+        $.get({
+            url:url,
+            dataType:"json",
+            success(res){
+                console.log(eval(res))
+                let nav = new bodylist(res);
+            }
+        })
+            $('.navtitle').text(str.title);
+            $('.goodsbody-left').text(str.title);
+            $('.goodsname').text(str.title);
+    }
+    //进行判断
+    if(str.num == 0){
+        responseT('../server/data01.php');
+    }else if(str.num == 1){
+        responseT("../server/data02.php");
+    }else if(str.num == 2){
+        responseT("../server/data05.php");
+    }else if(str.num == 3){
+       responseT("../server/data03.php");
+    }else if(str.num == 4){
+       responseT("../server/data04.php");
+    }
 })

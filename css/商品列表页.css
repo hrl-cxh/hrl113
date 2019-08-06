@@ -209,8 +209,8 @@
 }
 #hrl-goodslist .goodslist .goodslist-right .goodsbody-right .goodsSort .priceBox{
     position: absolute;
-    right: 0;
-    top: 14px;
+    right: 10px;
+    top: 15px;
 }
 #hrl-goodslist .goodslist .goodslist-right .goodsbody-right .goodsSort .priceBox a:nth-child(1){
     display: block;

@@ -1,3 +1,3 @@
 <?php
-echo file_get_contents("goodslist04.json");
+echo file_get_contents("goodslist05.json");
  ?>

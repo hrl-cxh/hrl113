@@ -15,7 +15,7 @@ $(function(){
             let oUl = $("<ul></ul>");
             oUl.addClass("nav-tab-list clearfix");
             let lis = this.navtabdata.map((item)=>{
-                return `<li><a href="http://127.0.0.1:1996/hrl113/html/商品列表页.html#">${item.title}</a></li>`
+                return `<li><a href="#">${item.title}</a></li>`
             }).join('');
             oUl.html(lis);
             $('.nav-tab').append(oUl);
@@ -134,5 +134,19 @@ $(function(){
     }
     new hotgoodslist(hotgoodsdata);
 
-    
+    //点击跳转列表页
+    $('.nav-tab-list').on("click","li",function(){
+        let num = $(this).index();
+        let text = $(this).text();
+        let newlist = [];
+        console.log($('.tab-txt').eq(num).find('li'));
+        $('.tab-txt').eq(num).find('li').map((item,index) =>{
+            console.log(item,index);
+            newlist.push($(index).text());
+        })
+        console.log(newlist.join(','));
+        let strA = newlist.join(',');
+
+        window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
+    })
 })

@@ -7,6 +7,10 @@
     <title>登录页面</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/登录页面.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/登录页面.js"></script>
+    <script src="../js/common.js"></script>
+
 </head>
 <body>
     <div id="hrl">
@@ -25,15 +29,19 @@
                         <input type="checkbox"><label for="check">记住我的id</label>                    
                     </div>
                     <div class="box4">
-                        <span class="radnum"></span> <button class="btnChange"></button>                
+                        <canvas class="radnum" id="radnum" width="176px" height="52px"></canvas>
+                        </span> <button id="btnChange" class="btnChange"></button>                
                     </div>
-                    <div>
+                    <div class="box5">
                         <label for="ancode">安全代码</label><input id="ancode" class="ancode" type="text">
                     </div>
-                    <!-- <div class="img">
-                        <img src="https://account.samsung.cn/images/mobile/layout/912x547b.jpg" alt="">
-                    </div> -->
-                    <button class="btnLogin">登录</button>
+                    <div class="img">
+                        <a href="#"><img src="https://account.samsung.cn/images/mobile/layout/912x547b.jpg" alt=""></a>
+                    </div>
+                    <div class="loginbox">
+                        <button class="btnLogin">登录</button>
+                    </div>
+                    
                 </fieldset>
             </div>
         </div>
