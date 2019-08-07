@@ -39,12 +39,15 @@ $(function(){
     oinput('.surname','.boxD label');
     oinput('.name','.boxE label');
     oinput('.ancode','.boxH label');
+    oinput('.idnum','.boxF label');
+    console.log($('.idnum'));
 
     //正则表达式
     let username = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;
     let pswstr = /^[A-Za-z0-9]{8,}$/;
     let sname =  /^([\u4e00-\u9fa5]){1,2}$/;
     let name = /^([\u4e00-\u9fa5]){1,2}$/;
+    let idstr = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
     
     //获取标签
     let emil = $('.emil');
@@ -52,17 +55,15 @@ $(function(){
     let agpsw = $('.agpsw');
     let surname = $('.surname');
     let userName = $('.name');
-    // let radnum = $('.radnum');
+    let ID = $('.idnum');
     let ancode = $('.ancode');
-    let btn = $('.nextbtn');
-    let birthday = $('.data');
-    console.log(birthday);
+    let btn = $('.boxI');
 
     //邮箱正则判断
     emil.blur(function(){
         let text = $.trim($(this).val());
         let oNext = $(this).siblings('label');
-        console.log(oNext)
+        // console.log(oNext)
         if (text.length == 0) {
             oNext.text('邮箱不能为空');
             oNext.css("color","red");
@@ -139,15 +140,30 @@ $(function(){
             oNext.css("color","green");
         }
     })
+    //身份证正则判断
+    ID.blur(function(){
+        let text = $.trim($(this).val());
+        let oNext = $(this).siblings('label');
+        if (text.length == 0) {
+            oNext.text('身份证不能为空');
+            oNext.css("color","red");
+        } else if (!idstr.test(text)) {
+            oNext.text('身份证不符合规范'); 
+            oNext.css("color","red");
+        } else {
+            oNext.text('身份证符合规范');
+            oNext.css("color","green");
+        }
+    })
     //随机验证码判断
     ancode.blur(function(){
         let num1 = ancode.val();
-        console.log(str.join(''));
+        // console.log(str.join(''));
         let oNext = $(this).siblings('label');
         if(num1.length == 0){
             oNext.text('安全代码不能为空');
             oNext.css("color","red");
-        }else if(num1 == str.join('')){
+        }else if(num1.toLowerCase() == str.join('').toLowerCase()){
             oNext.text('安全代码一致');
             oNext.css("color","green");
         }else{
@@ -155,7 +171,25 @@ $(function(){
             oNext.css("color","red");
         }
     })
+    //点击存储数据
+    
     btn.click(function(){
-        
+        let cont1 = emil.val();
+        let cont2 = psw.val();
+        let cont3 = surname.val();
+        let cont4 = userName.val();
+        let cont5 = ID.val();
+        let cont6 = ancode.val();
+        if(cont1 == 0 && cont2 == 0 && cont3 == 0 && cont4 == 0 && cont5 == 0 && cont6 == 0){
+            alert("请输入信息");
+        }else{
+        Cookie.setCookie("useEmil",cont1,"","/");      
+        Cookie.setCookie("pswnum",cont2,"","/");      
+        Cookie.setCookie("namestr",cont3 + cont4,"","/");     
+        Cookie.setCookie("personid",cont5,"","/");
+        window.open("../index.html");
+        }
     })
+    // cookieall.clear();
+    console.log(Cookie.getCookie("useEmil"));
 })

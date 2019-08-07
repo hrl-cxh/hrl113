@@ -31,6 +31,13 @@
 #hrl .top-tab{
     width: 100%;
     position: relative;
+    background: white;
+    z-index: 100;
+}
+#hrl .fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 #hrl .top-tab .nav-tab{
     border-bottom: 1px solid #cccccc;

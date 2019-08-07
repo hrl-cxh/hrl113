@@ -32,15 +32,19 @@ $(function(){
     }
 
 
-    console.log(!$('.truebtn').hasClass(''))
+    // console.log(!$('.truebtn').hasClass(''))
     
-        $('.truebtn').click(function(){
-            if(!$('.truebtn').hasClass('active')){
-                alert('请同意条款');
-            }else{
-                window.open("../html/register03.html");
-            }
-        })
+    $('.truebtn').click(function(){
+        if(!$('.truebtn').hasClass('active')){
+            alert('请同意条款');
+        }else{
+            window.open("../html/register03.html");
+        }
+    })
 
+    //点击拒接
+    $('.flasebtn').click(function(){
+        window.open("../html/登录页面.html");
+    })
     
 })

@@ -133,6 +133,18 @@ $(function(){
         }
     }
     new hotgoodslist(hotgoodsdata);
+    //吸顶效果
+    let head = document.getElementsByClassName('top-tab')[0];
+    let navheight = $('.top-tab').height();
+    console.log(head);
+    window.onscroll = function(){
+    let y = window.scrollY;
+        if(y > navheight){
+           $(head).addClass('top-tab fixed');
+        }else{
+           $(head).removeClass('fixed');
+        }
+    }
 
     //点击跳转列表页
     $('.nav-tab-list').on("click","li",function(){
@@ -148,5 +160,17 @@ $(function(){
         let strA = newlist.join(',');
 
         window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
+    })
+    
+    //显示用户名
+    let hrlnum = Cookie.getCookie("namestr");
+    console.log(hrlnum);
+    $('.denglu').text(hrlnum);
+    if(hrlnum == 0){
+        $('.denglu').text("登录");
+    }
+    // 点击注销用户
+    $('.zhuxiao').click(function(){
+        Cookie.clearCookie("/");
     })
 })
