@@ -172,5 +172,6 @@ $(function(){
     // 点击注销用户
     $('.zhuxiao').click(function(){
         Cookie.clearCookie("/");
+        // $('.denglu').text("登录");
     })
 })

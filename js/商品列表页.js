@@ -191,6 +191,14 @@ $(function(){
     }
     // 点击注销用户
     $('.zhuxiao').click(function(){
+        // $('.denglu').text("登录");
         Cookie.clearCookie("/");
+    })
+
+    //绑定点击事件进入详情页
+    $(".goodslist-right-body").on("click",".goodsShow",function(){
+        // console.log($(this).index());
+        let goodsnun = $(this).index();
+        window.location.href = "http://127.0.0.1:1996/hrl113/html/详情页.html?" + goodsnun;        
     })
 })

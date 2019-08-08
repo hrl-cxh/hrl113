@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            var arrT = [];
+            $(".sam-grid-wrap").each(function(index,item){
+                // console.log(item);
+                var imgarr = [];
+                var titlearr = [];
+                var typearr = [];
+                var typetextarr = [];
+                var memoryarr = [];
+                var pricearr = [];
+                var editionarr = [];
+                var a ={};
+
+                let Img = $(item).find(".sam-grid-left").find('.scroll-wrap').find('.scroll').find('.width-height').find('.scroll-background-image').find('a>img');
+                Img.map(function(item,index){
+                    imgarr.push(index.currentSrc);
+                })
+
+                let Title = $(item).find(".sam-grid-left").find('.scroll-wrap').find('.scroll').find('.icon-active-box').find('label>span');
+                Title.map(function(item,index){
+                    titlearr.push($(index).html());
+                })
+
+                let Type = $(item).find(".sam-grid-right").find('.sam-grid-line').find('.sam-grid-text:eq(1)').find('li>span');
+                Type.map(function(item,index){
+                    typearr.push($(index).text());
+                })
+
+                let Typetext = $(item).find(".sam-grid-right").find('.sam-grid-line').find('.sam-grid-text:eq(1)').find('li');
+                Typetext.map(function (item,index) { 
+                    typetextarr.push($(index).text());
+                 })
+                let memorytext = $(item).find(".sam-grid-right").find('.sam-grid-line:eq(2)').find('.nav').find('itempropertyname');
+                memorytext.map(function(item,index){
+                    memoryarr.push($(index).text());
+                })
+                let pricetext = $(item).find(".sam-grid-right").find('.sam-grid-line:eq(2)').find('.nav').find('itempropertynameprice');
+                pricetext.map(function(item,index){
+                    pricearr.push($(index).text().substr(1));
+                })
+                let editiontext = $(item).find(".sam-grid-right").find('.sam-grid-line:eq(3)').find('.nav').find('itempropertyname');
+                editiontext.map(function(item,index){
+                    editionarr.push($(index).text());
+                })
+                a.src = imgarr;
+                a.Title = titlearr;
+                a.name = $(item).find(".sam-grid-right").find('.sam-grid-line').find('h1').text();
+                a.typelist = typearr;
+                a.typetextlist = typetextarr;
+                a.memory = memoryarr;
+                a.price = pricearr;
+                a.edition = editionarr;
+                a.goodstype = $(item).find(".sam-grid-right").find('.sam-grid-line:eq(4)').find('.sam-block-text').find('#propertnames').text();
+                arrT.push(a);
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

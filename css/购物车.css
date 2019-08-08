@@ -1,0 +1,282 @@
+*{margin:0;padding:0;list-style: none;}
+#hrl{
+    width: 100%;
+}
+#hrl .top-nav{
+    width: 100%;
+    line-height: 36px;
+    padding:0 30px;
+    background: rgba(242, 242, 242);
+    position: relative;
+}
+#hrl .top-nav a{
+    color: #363636;
+}
+#hrl .top-nav .top-nav-right{
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+#hrl .top-nav .top-nav-left a{
+    font-size: 18px;
+}
+#hrl .top-nav .top-nav-right a{
+    font-size: 15px;
+}
+#hrl .top-nav .top-nav-right img{
+    width: 16px;
+    height: 16px;
+}
+/* 顶部选项卡的样式 */
+#hrl .top-tab{
+    width: 100%;
+    position: relative;
+    background: white;
+    z-index: 100;
+}
+#hrl .fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#hrl .top-tab .nav-tab{
+    border-bottom: 1px solid #cccccc;
+}
+#hrl .top-tab .nav-tab-list{
+    padding-left: 30px;
+}
+#hrl .top-tab .nav-tab-list li{
+    float: left;
+    margin-right: 16px;
+}
+#hrl .top-tab .nav-tab-list li a{
+    height: 64px;
+    /* width: 60px; */
+    line-height: 64px;
+    font-size: 15px;
+    color: #363636;
+}
+#hrl .top-tab .nav-tab-list .active{
+    border-bottom: 1px solid blue;
+}
+#hrl .top-tab .tab-cont{
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    z-index: 100;
+}
+#hrl .top-tab .tab-cont .goodsDiv{
+    display: none;
+}
+#hrl .top-tab .tab-cont .tab-active{
+    display: block;
+}
+#hrl .top-tab .tab-cont .goodsDiv ul{
+    float: left;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img{
+    border-right: 1px solid #cccccc;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li{
+    float: left;
+    max-width: 100px;
+    font-size: 13px;
+    margin: 0 30px;
+    text-align: center;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li a{
+    color: #363636;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li img{
+    width: 100px;
+    height: 100px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt{
+    margin-left: 30px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li{
+    line-height: 30px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li a{
+    font-size: 15px;
+    color: #363636;
+}
+/* 顶部logo、右边的样式 */
+#hrl .top-tab .top-logo{
+    position: absolute;
+    left: 45%;
+    top: 20px;
+}
+#hrl .top-tab .top-logo img{
+    width: 110px;
+    height: 20px;
+}
+#hrl .top-tab .top-tab-right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+#hrl .top-tab .top-tab-right a{
+    font-size: 14px;
+    color: #363636;
+    margin-right: 16px;
+}
+#hrl .top-tab .top-tab-right a img{
+    width: 20px;
+    height: 20px;
+}
+/* 购物车内容区样式 */
+#hrl .shopcar-top{
+    max-width: 1280px;
+    margin-top: 42px;
+    margin-bottom: 55px;
+}
+#hrl .shopcar-top .shopvar-top-list li{
+    float: left;
+    width: 33%;
+    height: 3px;
+    background: #cccccc;
+    text-align: center;
+    position: relative;
+}
+#hrl .shopcar-top .shopvar-top-list .li-active{
+    background: #1428a0;
+}
+#hrl .shopcar-top .shopvar-top-list li i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border:1px solid #cccccc;
+    border-radius: 50%;
+    background: #cccccc;;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+}
+#hrl .shopcar-top .shopvar-top-list li .i-active{
+    background: blue;
+}
+#hrl .shopcar-top .shopvar-top-list li a{
+    color: black;
+    position: absolute;
+    left: 45%;
+    top: 20px;
+}
+#hrl .shopbody{
+    padding:0 30px;
+    columns: #333333;
+    font-size: 14px;
+}
+#hrl .shopbody .shopbody-nav{
+    width: 100%;
+}
+#hrl .shopbody .shopbody-nav span{
+    color: #333333;
+    font-size: 24px;
+}
+#hrl .shopbody .shopbody-cont{
+    width: 100%;
+    background: #cccccc;
+}
+#hrl .shopbody .shopbody-cont div{
+    float: left;
+    width: 15%;
+    height: 47px;
+    margin-right: 4px;
+    line-height: 47px;
+}
+#hrl .shopbody .shopbody-cont .allbtn .btns{
+    width: 20px;
+    height: 20px;
+    background: white;
+    margin-right: 20px;
+}
+#hrl .shopbody .shopbody-cont .price{
+    text-align: center;
+}
+#hrl .shopbody .shopbody-cont .integral{
+    text-align: center;
+}
+#hrl .shopbody .shopbody-cont .goodsNum{
+    text-align: center;
+}
+#hrl .shopbody .shopbody-cont .allMoney{
+    text-align: right;
+}
+#hrl .shopbody .shop-body-goods{
+    width: 100%;
+}
+#hrl .shopbody .shop-body-goods .likeGoods{
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #cccccc;
+}
+#hrl .shopbody .shop-body-goods .likeGoods div{
+    float: left;
+    width: 15%;
+    height: 120px;
+    margin-right: 4px;
+    line-height: 120px;
+}
+#hrl .shopbody .shop-body-goods .likeGoods .btngood .checkA{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+}
+#hrl .shopbody .shop-body-goods .likeGoods .likeshow{
+    position: relative;     
+}
+#hrl .shopbody .shop-body-goods .likeGoods .likeshow .imgbox1{
+    width: 80px;
+    height: 80px;
+    border:1px solid #cccccc;
+    position: absolute;
+    top:20px;
+    left: -85px;
+}
+#hrl .shopbody .shop-body-goods .likeGoods .likeshow .imgbox1 img{
+    position: absolute;
+    top:0px;
+}
+#hrl .shopbody .shop-body-goods .likeGoods .likeshow span{
+    font-size: 12px;
+    height: 20px;
+}
+#hrl .shopbody .shop-body-goods .unitPrice{
+    text-align: center;
+}
+#hrl .shopbody .shop-body-goods .integoods{
+    text-align: center;
+}
+#hrl .shopbody .shop-body-goods .strNumer{
+    text-align: center;
+}
+#hrl .shopbody .shop-body-goods .strNumer .btnNum{
+    background: #cccccc;
+    width: 40px;
+    text-align: center;
+}
+#hrl .shopbody .shop-body-goods .allprice{
+    text-align: right;
+}
+#hrl .shopbody .shopbody-foot{
+    width: 100%;
+}
+#hrl .shopbody .shopbody-foot .footer{
+    width: 100%;
+    height: 80px;
+}
+#hrl .shopbody .shopbody-foot .footer label{
+    font-size: 12px;
+}
+#hrl .shopbody .shopbody-foot .footer .footer-right1{
+    float: right;
+}
+#hrl .shopbody .shopbody-foot .footer .footer-right2{
+    float: right;
+    margin-right: 20px;
+}

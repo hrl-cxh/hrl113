@@ -1,0 +1,420 @@
+*{margin:0;padding:0;list-style: none;}
+#hrl{
+    width: 100%;
+}
+#hrl .top-nav{
+    width: 100%;
+    line-height: 36px;
+    padding:0 30px;
+    background: rgba(242, 242, 242);
+    position: relative;
+}
+#hrl .top-nav a{
+    color: #363636;
+}
+#hrl .top-nav .top-nav-right{
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+#hrl .top-nav .top-nav-left a{
+    font-size: 18px;
+}
+#hrl .top-nav .top-nav-right a{
+    font-size: 15px;
+}
+#hrl .top-nav .top-nav-right img{
+    width: 16px;
+    height: 16px;
+}
+/* 顶部选项卡的样式 */
+#hrl .top-tab{
+    width: 100%;
+    position: relative;
+    background: white;
+    z-index: 100;
+}
+#hrl .fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#hrl .top-tab .nav-tab{
+    border-bottom: 1px solid #cccccc;
+}
+#hrl .top-tab .nav-tab-list{
+    padding-left: 30px;
+}
+#hrl .top-tab .nav-tab-list li{
+    float: left;
+    margin-right: 16px;
+}
+#hrl .top-tab .nav-tab-list li a{
+    height: 64px;
+    /* width: 60px; */
+    line-height: 64px;
+    font-size: 15px;
+    color: #363636;
+}
+#hrl .top-tab .nav-tab-list .active{
+    border-bottom: 1px solid blue;
+}
+#hrl .top-tab .tab-cont{
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    z-index: 100;
+}
+#hrl .top-tab .tab-cont .goodsDiv{
+    display: none;
+}
+#hrl .top-tab .tab-cont .tab-active{
+    display: block;
+}
+#hrl .top-tab .tab-cont .goodsDiv ul{
+    float: left;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img{
+    border-right: 1px solid #cccccc;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li{
+    float: left;
+    max-width: 100px;
+    font-size: 13px;
+    margin: 0 30px;
+    text-align: center;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li a{
+    color: #363636;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-img li img{
+    width: 100px;
+    height: 100px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt{
+    margin-left: 30px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li{
+    line-height: 30px;
+}
+#hrl .top-tab .tab-cont .goodsDiv .tab-txt li a{
+    font-size: 15px;
+    color: #363636;
+}
+/* 顶部logo、右边的样式 */
+#hrl .top-tab .top-logo{
+    position: absolute;
+    left: 45%;
+    top: 20px;
+}
+#hrl .top-tab .top-logo img{
+    width: 110px;
+    height: 20px;
+}
+#hrl .top-tab .top-tab-right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+#hrl .top-tab .top-tab-right a{
+    font-size: 14px;
+    color: #363636;
+    margin-right: 16px;
+}
+#hrl .top-tab .top-tab-right a img{
+    width: 20px;
+    height: 20px;
+}
+#hrl .hrl-body{
+    width: 100%;
+}
+#hrl .hrl-body .hrl-body-top{
+    padding:25px 30px;
+}
+#hrl .hrl-body .hrl-body-top ul li{
+    float: left;
+    font-size: 14px;
+    color: #333333;
+}
+#hrl .hrl-body .body-cont{
+    padding:20px 30px;
+    position: relative;
+}
+#hrl .hrl-body .body-cont .body-cont-left{
+    width: 100%;
+    height: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox{
+    height: 100%;
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-top{
+     width: 440px;
+     height: 372px;
+     /* border:1px solid #ccc; */
+     position: relative;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-top .imgbox-top-show {
+    width: 372px;
+    height: 372px;
+    float: right;
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-top .imgbox-top-title{
+    float: left;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-top .imgbox-top-title ul{
+    width: 55px;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-top .imgbox-top-title ul li{
+    width: 50px;
+    background: rgba(239, 110, 68);
+    margin-bottom: 10px;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab{
+    width: 400px;
+    margin-top: 8px;
+    position: relative;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgsbox{
+    text-align: center;
+    overflow: hidden;
+    width: 440px;
+    height: 80px;
+    border:1px solid #ccc;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgsbox ul{
+    width: 100%;
+    height: 80px;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgsbox ul li{
+    float: left;
+    text-align: center;
+    margin-left: 28px;
+    text-align: center;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgsbox ul li img{
+    width: 72px;
+    height: 72px;
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgleft{
+    position: absolute;
+    left: 0;
+    top: 18px;
+    font-size: 30px;
+    width: 20px;
+    height: 38px;
+    background: rgba(242, 242, 242 0.5);
+}
+#hrl .hrl-body .body-cont .body-cont-left .imgbox .imgbox-tab .imgright{
+    position: absolute;
+    right: -8px;
+    top: 18px;
+    font-size: 30px;
+    width: 20px;
+    height: 38px;
+    background: rgba(242, 242, 242 0.5);
+}
+#hrl .hrl-body .body-cont .body-cont-right{
+    width: 440px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+#hrl .hrl-body .body-cont .body-cont-right h1{
+    font-size: 28px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .typebox{
+    width: 100%;
+    padding-bottom: 10px;
+    /* height: 100%; */
+    background: rgba(242, 242, 242);
+}
+#hrl .hrl-body .body-cont .body-cont-right .typebox ul li{
+    margin-top: 8px;
+    font-size: 12px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .typebox ul li span{ 
+    width: 48px;
+    height: 22px;
+    border-radius: 8px;
+    background: blue;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding:4px 4px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist{
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist label{
+    font-size: 14px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li{
+    float: left;
+    width: 130px;
+    height: 40px;
+    border:1px solid #cccccc;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li i{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li:nth-child(1) i{
+    background: rgba(13, 13, 13);
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li:nth-child(2) i{
+    background: rgba(185, 213, 222);
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li:nth-child(3) i{
+    background: rgba(39, 124, 125);
+}
+#hrl .hrl-body .body-cont .body-cont-right .colorlist ul li:nth-child(4) i{
+    background: rgba(64, 107, 145);
+}
+#hrl .hrl-body .body-cont .body-cont-right .goodscont{
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .goodscont label{
+    font-size: 16px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .goodscont .contbox{
+    width: 100%;
+    /* height: 100px; */
+    text-align: center;
+}
+#hrl .hrl-body .body-cont .body-cont-right .goodscont .contbox span{
+    float: left;
+    /* display: inline-block; */
+    border:1px solid blue;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .edition{
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .edition label{
+    font-size: 16px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .edition ul li{
+    float: left;
+    width: 130px;
+    height: 40px;
+    border:1px solid #cccccc;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .gift{
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .gift label{
+    font-size: 16px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .gift .giftlist li{
+    float: left;
+    width: 130px;
+    height: 40px;
+    border:1px solid #cccccc;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price label{
+    font-size: 16px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody{
+    width: 100%;
+    height: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-top{
+    border-bottom:1px solid #cccccc;
+    background: rgb(248, 248, 248);
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-top span{
+    width: 40%;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-co{
+    width: 100%;
+    background: rgb(248, 248, 248);
+    margin-bottom: 10px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-co p{
+    font-size: 10px;
+    width: 50px;
+    padding:4px;
+    margin-right: 10px;
+    display: inline-block;
+    border:1px solid orange;
+    color:orange;
+    text-align: center;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-co a{
+    font-size: 10px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-co span{
+    font-size: 10px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-new{
+    background: rgb(248, 248, 248);
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-new p{
+    font-size: 10px;
+    width: 50px;
+    padding:4px;
+    margin-right: 10px;
+    display: inline-block;
+    border:1px solid orange;
+    color:orange;
+    text-align: center;
+}
+#hrl .hrl-body .body-cont .body-cont-right .price .pricebody .pricebody-bottom .pricebody-bottom-new ul li{
+    font-size: 10px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .btns{
+    width: 100%;
+}
+#hrl .hrl-body .body-cont .body-cont-right .btns span{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border:1px solid #cccccc;
+    border-radius: 20px;
+}
+#hrl .hrl-body .body-cont .body-cont-right .btns .btnnew{
+    background: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
