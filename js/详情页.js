@@ -205,6 +205,7 @@ $(function(){
                         console.log(res);
                     }
                 });
+                window.location.href = "../html/购物车.html"
             })
         }
     })
