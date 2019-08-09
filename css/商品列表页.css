@@ -297,3 +297,18 @@
     background: black;
     margin-top: 10px;
 }
+/* 页码样式 */
+#hrl-goodslist .goodslist .goodslist-right .pagesnum{
+    width: 100%;
+}
+#hrl-goodslist .goodslist .goodslist-right .pagesnum .pagesbtn{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background: #ccc;
+    color: white;
+    text-align: center;
+}
+#hrl-goodslist .goodslist .goodslist-right .pagesnum .pages-active{
+    background: orange;
+}

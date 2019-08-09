@@ -86,7 +86,7 @@ $(function(){
             var memory = datares.memory.split(',');
             var name = datares.name;
             var price = datares.price.split(',');
-            // console.log(goodstype,memory,price);
+            console.log(oid);
             //进行数据渲染
             $('.hrl-body-top>ul>li:eq(4)').text(name);
             $('.body-cont-right>h1').text(name);
@@ -198,7 +198,8 @@ $(function(){
                     data: {
                         "name":nameA,
                         "price":untprice,
-                        "src":imgA
+                        "src":imgA,
+                        "num":1,
                     },
                     // dataType: "json",
                     success: function (res) {
@@ -210,6 +211,7 @@ $(function(){
         }
     })
     console.log( $('.imgsbox'));
+    //放大镜
     $('.imgsbox').on("click","img",function(){
         // console.log($(this));
         let imgsrc = $(this).prop("src");

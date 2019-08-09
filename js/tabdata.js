@@ -42,7 +42,7 @@ let navtabdata = [
             "imgurl":"//res.samsungeshop.com.cn/resources/2018/8/27/15353647882218146_293X293.jpg?version=000000",
             "imgname":"Samsung Galaxy Watch 蓝牙版46mm钛泽银"
         }],
-        "textdata":["null"]
+        "textdata":[""]
     }]
 },{
     "title":"个人电脑",

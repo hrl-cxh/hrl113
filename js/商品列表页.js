@@ -103,22 +103,9 @@ $(function(){
                         </p>
                     </div>
                 </div>
-            </div>`
+                </div>`
             }).join('');
             oDiv.html(html);
-        }
-    }
-
-    //吸顶效果
-    let head = document.getElementsByClassName('top-tab')[0];
-    let navheight = $('.top-tab').height();
-    console.log(head);
-    window.onscroll = function(){
-    let y = window.scrollY;
-        if(y > navheight){
-           $(head).addClass('top-tab fixed');
-        }else{
-           $(head).removeClass('fixed');
         }
     }
 
@@ -135,7 +122,7 @@ $(function(){
     var lisarr = str.newlis.split(',');
     let newhtml = '';
     for(let i = 0;i < lisarr.length;i++){
-        console.log(lisarr[i]);
+        // console.log(lisarr[i]);
         newhtml += `<li><a href="#">${lisarr[i]}</a></li>`;
         $('.type-body-list2').eq(0).find('ul').html(newhtml);
     }
@@ -146,8 +133,44 @@ $(function(){
             dataType:"json",
             success(res){
                 console.log(eval(res))
-                let nav = new bodylist(res);
-            }
+                let nav = new bodylist(res.slice(0,10));
+                
+                //面向对象进行分页
+                class pagesHTML{
+                    constructor(res){
+                        this.res = res;
+                        this.links();
+                    }
+                    //处理函数
+                    links(){
+                        this.creatbutton();
+                        this.createpagea();
+                    }
+                    //创建标签
+                    creatbutton(){
+                        let num = this.res.length;
+                        let pagesNum = Math.ceil(num/10);
+                        let btnnum = '';
+                        console.log(pagesNum)
+                        for(var i = 0;i<pagesNum;i++){
+                            btnnum += `<button class="pagesbtn">${i + 1}</button>`;
+                        }
+                        $(".pagesnum").html(btnnum);
+                        $(".pagesbtn:eq(0)").addClass("pages-active");
+                    }
+                    //绑定点击换页事件
+                    createpagea(){
+                        $(".pagesnum").on("click",".pagesbtn",function(){
+                            $(this).addClass("pages-active").siblings().removeClass("pages-active");
+                            console.log($(this).index());
+                            let numstr = $(this).index() + 1
+                            let nav = new bodylist(res.slice($(this).index() * 10,10 * numstr));
+                        })
+                    }
+                }
+                let p2 = new pagesHTML(res);
+                
+                }
         })
             $('.navtitle').text(str.title);
             $('.goodsbody-left').text(str.title);
@@ -202,4 +225,18 @@ $(function(){
         let goodsnun = $(this).index();
         window.location.href = "http://127.0.0.1:1996/hrl113/html/详情页.html?" + goodsnun;        
     })
+
+    //吸顶效果
+    let head = document.getElementsByClassName('top-tab')[0];
+    let navheight = $('.top-tab').height();
+    // console.log(head);
+    window.onscroll = function(){
+    let y = window.scrollY;
+        if(y > navheight){
+           $(head).addClass('top-tab fixed');
+        }else{
+           $(head).removeClass('fixed');
+        }
+    }
+
 })

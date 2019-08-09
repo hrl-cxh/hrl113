@@ -81,6 +81,7 @@ $(function(){
         }
         //创建标签
         creatdivhtml(){
+            //发送请求
             $.get({
                 url:"../server/data07.php",
                 dataType:"json",
@@ -90,9 +91,11 @@ $(function(){
                     let divbox = '';
                     res.forEach((item)=>{
                     console.log(item);
+                    let numB = item.num;
+                    console.log(numB);
                     divbox += `<div class="likeGoods clearfix">
                     <div class="btngood">
-                        <input class="checkA" type="checkbox" name="hobby">
+                        <input class="checkA" type="checkbox" name="hobby" checked="checked">
                     </div>
                     <div class="likeshow">
                         <div class="imgbox1">
@@ -104,14 +107,14 @@ $(function(){
                         <span>￥${item.price}</span>
                     </div>
                     <div class="integoods">
-                        <span>${item.price.substr(0,4)}</span>
+                        <span>${item.price.substr(0,4) * numB}</span>
                     </div>
                     <div class="strNumer">
-                        <input value="1" class="btnNum" type="number">
+                        <input value="${item.num}" class="btnNum" type="number">
                         <span class="removegoods"><a href="#" id="${item.id}" onclick="window.location.reload();">删除</a></span>
                     </div>
                     <div class="allprice">
-                        <span>￥${item.price}</span>
+                        <span>￥${item.price * numB}</span>
                     </div>
                     </div>`
                     $('.shop-body-goods').html(divbox);
@@ -124,7 +127,7 @@ $(function(){
                 // console.log(allDiv);
                 let newarr1 = [];
                 btnNum.map((index,item) =>{
-                    console.log(item);
+                    // console.log(item);
                     item.oninput = function(){
                         let numall = $(this).val();
                         let allnums = $(this).parent(".strNumer").siblings(".unitPrice").children("span");
@@ -137,12 +140,22 @@ $(function(){
                 })
                 function ppt(){
                     let allppt =  allDiv.find(".allprice").find('span');
+                    console.log(allppt)
+                    let allcheck = $(".checkA");
+                    console.log(allcheck)
                     let numA = 0;
-                    for(var i = 0;i < allppt.length;i++){
-                        numA += Number(allppt[i].innerText.slice(1));
-                    }
-                    $('.footer-right1 span:eq(1)').text("￥"+numA);
-                    $('.footer-right2 span:eq(1)').text(numA);
+                        if(!allcheck.checked){
+                            for(var i = 0;i < allppt.length;i++){
+
+                                numA += Number(allppt[i].innerText.slice(1));
+                            }
+                            
+                            $('.footer-right1 span:eq(1)').text("￥"+numA);
+                            $('.footer-right2 span:eq(1)').text(numA);
+                        }else{
+                            $('.footer-right1 span:eq(1)').text("￥"+0);
+                            $('.footer-right2 span:eq(1)').text(0);
+                        }
                 }
                 ppt();
 
@@ -167,10 +180,10 @@ $(function(){
 
                 //点击删除数据
                 let regoods = $(".removegoods a");
-                console.log(regoods);
+                // console.log(regoods);
                 for(var i = 0;i<regoods.length;i++){
                     $(regoods[i]).click(function () { 
-                        console.log($(this).attr("id"));
+                        // console.log($(this).attr("id"));
                         let goodsid = ($(this).attr("id"));
                         $.ajax({
                             type: "post",
@@ -180,7 +193,7 @@ $(function(){
                             },
                             // dataType: "json",
                             success: function (res) {
-                                console.log(res);
+                                // console.log(res);
                             }
                         });
                         
@@ -215,12 +228,12 @@ $(function(){
         let num = $(this).index();
         let text = $(this).text();
         let newlist = [];
-        console.log($('.tab-txt').eq(num).find('li'));
+        // console.log($('.tab-txt').eq(num).find('li'));
         $('.tab-txt').eq(num).find('li').map((item,index) =>{
-            console.log(item,index);
+            // console.log(item,index);
             newlist.push($(index).text());
         })
-        console.log(newlist.join(','));
+        // console.log(newlist.join(','));
         let strA = newlist.join(',');
 
         window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
@@ -228,7 +241,7 @@ $(function(){
 
     //显示用户名
     let hrlnum = Cookie.getCookie("namestr");
-    console.log(hrlnum);
+    // console.log(hrlnum);
     $('.denglu').text(hrlnum);
     if(hrlnum == 0){
         $('.denglu').text("登录");
