@@ -6,18 +6,15 @@ $(function(){
     // 下面的选中反过来控制全选
     // $(all).attr("checked",true);
     // var istrue = true;
-	for(let i = 0; i < hobby.length; i++){
-        hobby[i].onclick = function(){
-            console.log(hobby[i].checked);
-            if(hobby[3].checked == true && hobby[2].checked == true && hobby[1].checked == true && hobby[0].checked == true){
-                $(all).attr("checked",true);
-                $('.truebtn').addClass('active');
-            }else{
-                $(all).attr("checked",false);
-                $('.truebtn').removeClass('active');
-            }
+    $(hobby).click(function(){
+        if($(hobby).filter(":checked").length == hobby.length){
+            $(all).prop("checked",true);
+            $('.truebtn').addClass('active');
+        }else{
+            $(all).prop("checked",false);
+            $('.truebtn').removeClass('active');
         }
-    }
+    })
     //全选
     all.onclick = function() {
         //点击全选，让下面所有复选框跟着变

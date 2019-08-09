@@ -66,10 +66,7 @@ $(function(){
     }
     let navtab = new navlist(navtabdata);
 
-    
-    
-
-//进行渲染
+    //进行渲染
     class divHTML{
         constructor(){
             this.links();
@@ -88,7 +85,7 @@ $(function(){
                 url:"../server/data07.php",
                 dataType:"json",
                 success(res){
-                    console.log(res)
+                    // console.log(res)
                     // 进行渲染
                     let divbox = '';
                     res.forEach((item)=>{
@@ -111,6 +108,7 @@ $(function(){
                     </div>
                     <div class="strNumer">
                         <input value="1" class="btnNum" type="number">
+                        <span class="removegoods"><a href="#" id="${item.id}" onclick="window.location.reload();">删除</a></span>
                     </div>
                     <div class="allprice">
                         <span>￥${item.price}</span>
@@ -147,37 +145,85 @@ $(function(){
                     $('.footer-right2 span:eq(1)').text(numA);
                 }
                 ppt();
+
+                //实现全选 反选
+                let hobby = document.getElementsByName('hobby');
+                let all = document.querySelector("#btns");
+                // console.log(hobby);
+                all.onclick = function(){
+                    for(var i = 0; i < hobby.length; i++){
+                        hobby[i].checked = all.checked;
+                    }
+                }
+
+                //通过全选控制单选
+                $(hobby).click(function(){
+                    if($(hobby).filter(":checked").length == hobby.length){
+                        $(all).prop("checked",true);
+                    }else{
+                        $(all).prop("checked",false);
+                    }
+                })
+
+                //点击删除数据
+                let regoods = $(".removegoods a");
+                console.log(regoods);
+                for(var i = 0;i<regoods.length;i++){
+                    $(regoods[i]).click(function () { 
+                        console.log($(this).attr("id"));
+                        let goodsid = ($(this).attr("id"));
+                        $.ajax({
+                            type: "post",
+                            url: "../server/data08.php",
+                            data: {
+                                "id":goodsid
+                            },
+                            // dataType: "json",
+                            success: function (res) {
+                                console.log(res);
+                            }
+                        });
+                        
+                     })
+                }   
             }
             })
         }
         //全选，单选
         addclick(){
-            let hobby = document.getElementsByName('hobby');
-            let all = document.querySelector("#btns");
-            all.onclick = function(){
-                for(var i = 0; i < hobby.length; i++){
-                    hobby[i].checked = all.checked;
-                }
-            }
-
-            // function allCheck() {
-            //     var istrue = true;
-            //     for(var i = 0; i < hobby.length; i++) {
-            //         if(!hobby[i].checked) {
-            //             //没选
-            //             istrue = false;
-            //             break;
-            //         }
-            //     }
-            //     return istrue;
-            // }
-            // if(all.checked = !allCheck()){
-            //     $(all).attr("checked",true);
-            // }
+            
 
         }
     }
     let p = new divHTML();
 
+    //吸顶效果
+    let head = document.getElementsByClassName('top-tab')[0];
+    let navheight = $('.top-tab').height();
+    // console.log(head);
+    window.onscroll = function(){
+    let y = window.scrollY;
+        if(y > navheight){
+           $(head).addClass('top-tab fixed');
+        }else{
+           $(head).removeClass('fixed');
+        }
+    }
+
+    //点击跳转列表页
+    $('.nav-tab-list').on("click","li",function(){
+        let num = $(this).index();
+        let text = $(this).text();
+        let newlist = [];
+        console.log($('.tab-txt').eq(num).find('li'));
+        $('.tab-txt').eq(num).find('li').map((item,index) =>{
+            console.log(item,index);
+            newlist.push($(index).text());
+        })
+        console.log(newlist.join(','));
+        let strA = newlist.join(',');
+
+        window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
+    })
 })
 

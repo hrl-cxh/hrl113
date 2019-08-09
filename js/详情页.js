@@ -228,16 +228,20 @@ $(function(){
            $(head).removeClass('fixed');
         }
     }
-
-    //点击加入购物车
-    // $('.btncar').click(function(){
-    //    let imgA =  $('.imglist li:eq(1)').find('img').prop("src");
-    //    console.log(imgA);
-    //    let untprice = $('.pricebody-top span:eq(1)').text();
-    //    console.log(untprice);
-    //    let nameA = $('.body-cont-right h1').text();
-    //    console.log(nameA);
-    //    window.location.href = "http://127.0.0.1:1996/hrl113/html/%e8%b4%ad%e7%89%a9%e8%bd%a6.html?" + "src" + "=" + imgA + '&' + "name" + "=" + nameA + "&" + "price" + "=" + untprice;
-    // })
     
+    //点击跳转列表页
+    $('.nav-tab-list').on("click","li",function(){
+        let num = $(this).index();
+        let text = $(this).text();
+        let newlist = [];
+        console.log($('.tab-txt').eq(num).find('li'));
+        $('.tab-txt').eq(num).find('li').map((item,index) =>{
+            console.log(item,index);
+            newlist.push($(index).text());
+        })
+        console.log(newlist.join(','));
+        let strA = newlist.join(',');
+
+        window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
+    })
 })
