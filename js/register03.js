@@ -180,16 +180,45 @@ $(function(){
         let cont4 = userName.val();
         let cont5 = ID.val();
         let cont6 = ancode.val();
-        if(cont1 == 0 && cont2 == 0 && cont3 == 0 && cont4 == 0 && cont5 == 0 && cont6 == 0){
-            alert("请输入信息");
+        if(cont1.length == 0){
+            alert("邮箱不能为空");
+        }else if(cont2.length == 0){
+            alert("密码不能为空");
+        }else if(cont3.length == 0){
+            alert("姓氏不能为空");
+        }else if(cont4.length == 0){
+            alert("名字不能为空");
+        }else if(cont5.length == 0){
+            alert("身份证不能为空")
+        }else if(cont6.length == 0){
+            alert("验证码不能为空");
         }else{
-        Cookie.setCookie("useEmil",cont1,"","/");      
-        Cookie.setCookie("pswnum",cont2,"","/");      
-        Cookie.setCookie("namestr",cont3 + cont4,"","/");     
-        Cookie.setCookie("personid",cont5,"","/");
+        let date1 = new Date();
+        let userday = afterDate(date1,2);
+        Cookie.setCookie("useEmil",cont1, userday ,"/");      
+        Cookie.setCookie("pswnum",cont2, userday ,"/");      
+        Cookie.setCookie("namestr",cont3 + cont4, userday ,"/");     
+        Cookie.setCookie("personid",cont5, userday ,"/");
+        // 把数据存入数据库
+        $.ajax({
+            type: "post",
+            url: "../server/userlist.php",
+            data: {
+                "name":cont3 + cont4,
+                "psw":cont2,
+                "emali":cont1,
+                "poersoncar":cont5
+            },
+            // dataType: "dataType",
+            success: function (res) {
+                console.log(res);
+            }
+        });
+        
+        //进入首页
         window.open("../index.html");
         }
+        
     })
-    // cookieall.clear();
     console.log(Cookie.getCookie("useEmil"));
 })

@@ -244,4 +244,17 @@ $(function(){
 
         window.location.href = "http://127.0.0.1:1996/hrl113/html/商品列表页.html?"+ "num" + '=' + num + '&' + "title" + '=' + text + '&' + "newlis" + '=' + strA;        
     })
+
+    //显示用户名
+    let hrlnum = Cookie.getCookie("namestr");
+    console.log(hrlnum);
+    $('.denglu').text(hrlnum);
+    if(hrlnum == 0){
+        $('.denglu').text("登录");
+    }
+    // 点击注销用户
+    $('.zhuxiao').click(function(){
+        Cookie.clearCookie("/");
+        // $('.denglu').text("登录");
+    })
 })

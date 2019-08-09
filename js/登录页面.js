@@ -29,59 +29,81 @@ $(function(){
     oinput('.psw','.box2 label');
     oinput('.ancode','.box5 label');
     let str = '';
+    //点击生成验证码
     $('#btnChange').click(function(){
         let ocans = document.getElementById('radnum');
         console.log(ocans);
         str = new RandomCode(ocans);
     })
-    //失去焦点事件
-    $(".userphone").blur(function(){
-        let text = $.trim($(this).val());
-        let oNext = $(this).siblings('label');
-        if(text == 0){
-            oNext.text("邮箱不能为空");
-            oNext.css("color","red");
-        }else{
-            oNext.text("请输入邮箱");
+    
+    //向数据库发送请求
+    $.ajax({
+        type: "get",
+        url: "../server/data09.php",
+        dataType: "json",
+        success: function (res) {
+            for(var i = 0;i<res.length;i++){
+                let stremali = res[i].emali;
+                let strpsw = res[i].psw;
+                let strname = res[i].name;
+                let strpoersoncar = res[i].poersoncar;
+                console.log(stremali,strpsw,strname,strpoersoncar);
+
+                //失去焦点事件
+                $(".userphone").blur(function(){
+                    let text = $.trim($(this).val());
+                    let oNext = $(this).siblings('label');
+                    if(text == 0){
+                        oNext.text("邮箱不能为空");
+                        oNext.css("color","red");
+                    }else if(text !== stremali){
+                        oNext.text("没有该用户");
+                        oNext.css("color","red");
+                    }else{
+                        oNext.text("请输入邮箱");
+                    }
+                })
+                //密码框失去焦点事件
+                $(".psw").blur(function(){
+                    let text = $.trim($(this).val());
+                    let oNext = $(this).siblings('label');
+                    if(text == 0){
+                        oNext.text("密码不能为空");
+                        oNext.css("color","red");
+                    }else if(text !== strpsw){
+                        oNext.text("密码不对");
+                        oNext.css("color","red");
+                    }else{
+                        oNext.text("请输入密码");
+                    }
+                })
+                //验证码失去焦点事件
+                $(".ancode").blur(function(){
+                    let text = $.trim($(this).val());
+                    let oNext = $(this).siblings('label');
+                    if(text == 0){
+                        oNext.text("验证码不能为空");
+                        oNext.css("color","red");
+                    }else if(text == str.join("")){
+                        oNext.text("验证码一致");
+                        oNext.css("color","green");            
+                    }else{
+                        oNext.text("验证码不一致");
+                        oNext.css("color","red");  
+                    }
+                })
+                //点击验证是否有该用户
+                $(".btnLogin").click(function(){
+                    if($('.userphone').val() == stremali && $('.psw').val() == strpsw && $('.ancode').val().length !== 0){
+                        Cookie.setCookie("namestr",strname,"","/");
+                        window.open("../index.html");
+                    }else{
+                        alert("用户不存在或者信息未完善，请先完善信息");
+                    }
+                })
+                
+            }
+
         }
-    })
-    //密码框失去焦点事件
-    $(".psw").blur(function(){
-        let text = $.trim($(this).val());
-        let oNext = $(this).siblings('label');
-        if(text == 0){
-            oNext.text("密码不能为空");
-            oNext.css("color","red");
-        }else{
-            oNext.text("请输入密码");
-        }
-    })
-    //验证码失去焦点事件
-    $(".ancode").blur(function(){
-        let text = $.trim($(this).val());
-        let oNext = $(this).siblings('label');
-        if(text == 0){
-            oNext.text("验证码不能为空");
-            oNext.css("color","red");
-        }else if(text == str.join("")){
-            oNext.text("验证码一致");
-            oNext.css("color","green");            
-        }else{
-            oNext.text("验证码不一致");
-            oNext.css("color","red");  
-        }
-    })
-    //与数据库进行匹对
-    let cookEmil = Cookie.getCookie("useEmil");
-    let cookpsw = Cookie.getCookie("pswnum");
-    // 绑定点击事件
-    $(".btnLogin").click(function(){
-        let userEmil = $('.userphone').val();
-        let userPsw = $('.psw').val();
-        if(userEmil == cookEmil && userPsw == cookpsw){
-            window.open("../index.html");                      
-        }else{
-            alert("用户不存在");  
-        }
-    })
+    });
 })

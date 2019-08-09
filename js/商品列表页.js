@@ -185,6 +185,7 @@ $(function(){
     //显示用户名
     let hrlnum = Cookie.getCookie("namestr");
     console.log(hrlnum);
+    console.log($('.denglu'));
     $('.denglu').text(hrlnum);
     if(hrlnum == 0){
         $('.denglu').text("登录");
