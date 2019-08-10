@@ -127,7 +127,7 @@ $(function(){
         $('.type-body-list2').eq(0).find('ul').html(newhtml);
     }
     //进行必要的封装
-    function responseT(url){
+    function responseT(url,pagessrc){
         $.get({
             url:url,
             dataType:"json",
@@ -135,42 +135,63 @@ $(function(){
                 console.log(eval(res))
                 let nav = new bodylist(res.slice(0,10));
                 
-                //面向对象进行分页
-                class pagesHTML{
-                    constructor(res){
-                        this.res = res;
-                        this.links();
-                    }
-                    //处理函数
-                    links(){
-                        this.creatbutton();
-                        this.createpagea();
-                    }
-                    //创建标签
-                    creatbutton(){
-                        let num = this.res.length;
-                        let pagesNum = Math.ceil(num/10);
-                        let btnnum = '';
-                        console.log(pagesNum)
-                        for(var i = 0;i<pagesNum;i++){
-                            btnnum += `<button class="pagesbtn">${i + 1}</button>`;
+                //实现点击价格升序效果
+                $(".priceBox").on("click","a",function(){
+                    // console.log($(this).index());
+                    let aid = $(this).index()
+                    $.ajax({
+                        type: "post",
+                        url: pagessrc,
+                        data: {
+                            "aid":aid
+                        },
+                        dataType: "json",
+                        success: function (res) {
+                            console.log(res);
+                            let nav = new bodylist(res.slice(0,10));
+
+                            //面向对象进行分页
+                            class pagesHTML{
+                                constructor(res){
+                                    this.res = res;
+                                    this.links();
+                                }
+                                //处理函数
+                                links(){
+                                    this.creatbutton();
+                                    this.createpagea();
+                                }
+                                //创建标签
+                                creatbutton(){
+                                    let num = this.res.length;
+                                    let pagesNum = Math.ceil(num/10);
+                                    let btnnum = '';
+                                    // console.log(pagesNum)
+                                    for(var i = 0;i<pagesNum;i++){
+                                        btnnum += `<button class="pagesbtn">${i + 1}</button>`;
+                                    }
+                                    $(".pagesnum").html(btnnum);
+                                    $(".pagesbtn:eq(0)").addClass("pages-active");
+                                }
+                                //绑定点击换页事件
+                                createpagea(){
+                                    $(".pagesnum").on("click",".pagesbtn",function(){
+                                        $(this).addClass("pages-active").siblings().removeClass("pages-active");
+                                        // console.log($(this).index());
+                                        let numstr = $(this).index() + 1
+                                        let nav = new bodylist(res.slice($(this).index() * 10,10 * numstr));
+                                    })
+                                }
+                                //实现价格升降的功能
+
+                            }
+                            let p2 = new pagesHTML(res);
                         }
-                        $(".pagesnum").html(btnnum);
-                        $(".pagesbtn:eq(0)").addClass("pages-active");
-                    }
-                    //绑定点击换页事件
-                    createpagea(){
-                        $(".pagesnum").on("click",".pagesbtn",function(){
-                            $(this).addClass("pages-active").siblings().removeClass("pages-active");
-                            console.log($(this).index());
-                            let numstr = $(this).index() + 1
-                            let nav = new bodylist(res.slice($(this).index() * 10,10 * numstr));
-                        })
-                    }
+                    });
+                })
                 }
-                let p2 = new pagesHTML(res);
                 
-                }
+
         })
             $('.navtitle').text(str.title);
             $('.goodsbody-left').text(str.title);
@@ -178,15 +199,15 @@ $(function(){
     }
     //进行判断
     if(str.num == 0){
-        responseT('../server/data01.php');
+        responseT('../server/data01.php','../server/pageslist01.php');
     }else if(str.num == 1){
-        responseT("../server/data02.php");
+        responseT("../server/data02.php",'../server/pageslist02.php');
     }else if(str.num == 2){
-        responseT("../server/data05.php");
+        responseT("../server/data05.php",'../server/pageslist03.php');
     }else if(str.num == 3){
-       responseT("../server/data03.php");
+        responseT("../server/data03.php",'../server/pageslist04.php');
     }else if(str.num == 4){
-       responseT("../server/data04.php");
+        responseT("../server/data04.php",'../server/pageslist05.php');
     }
 
     //点击跳转列表页
